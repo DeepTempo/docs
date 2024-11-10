@@ -1,0 +1,15 @@
+server {
+    listen 80;
+    server_name your-domain.com;  # Replace with your domain or IP
+
+    root /home/ubuntu/projects/my-website/build;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Enable gzip compression
+    gzip on;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+}
