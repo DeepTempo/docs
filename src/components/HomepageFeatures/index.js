@@ -4,32 +4,35 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Jump Ahead',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        DeepTempo.ai returns the power to defenders; 
+        we keep defenders ahead of attackers by increasing 
+        the productivity of cyber defense while saving 
+        costs by applying our LogLM (Log Language Model)  
+        based solutions.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Software Agent-Free Architecture',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Operates with an agent-free architecture, running on Snowflake and other security data lakes.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Simple Integration with Existing SIEM and Workflows',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Integrates with existing Security Information and Event Management 
+        (SIEM) systems and workflows, enhancing security teams' ability to 
+        detect and respond to threats.
       </>
     ),
   },
