@@ -73,7 +73,6 @@ CALL model_optimization.tune_model('your_service_name', 'entity');
 
 Manage system references:
 Through the reference management 
-![alt text](reference.png)
 ## Management Console
 
 Access the web-based management interface:
