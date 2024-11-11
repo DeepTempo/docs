@@ -10,27 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-      
-      - name: Debug Information
-        run: |
-          pwd
-          ls -la
-          echo "Node version:"
-          node --version
-          echo "NPM version:"
-          npm --version
-          
-      - name: Install Dependencies
-        run: |
-          npm install
-        continue-on-error: true
           
       - name: Execute remote deployment
         uses: appleboy/ssh-action@master
@@ -39,15 +23,10 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            set -e
-            echo "Current directory:"
-            pwd
-            echo "Changing to docs directory..."
             cd /home/ubuntu/projects/docs
-            echo "Pulling latest changes..."
+            sudo chown -R ubuntu:ubuntu .
+            sudo chmod -R 755 .
             git pull origin main
-            echo "Installing dependencies..."
+            rm -rf node_modules package-lock.json build/
             npm install
-            echo "Building site..."
             npm run build
-            echo "Deployment complete!"
