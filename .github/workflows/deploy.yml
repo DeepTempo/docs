@@ -24,9 +24,38 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/projects/docs
+            echo "Setting git configuration..."
+            git config --global user.email "github-actions@github.com"
+            git config --global user.name "GitHub Actions"
+            
+            echo "Setting permissions..."
             sudo chown -R ubuntu:ubuntu .
             sudo chmod -R 755 .
+            
+            echo "Current git status:"
+            git status
+            
+            echo "Current git branch:"
+            git branch
+            
+            echo "Cleaning git working directory..."
+            git reset --hard HEAD
+            git clean -fd
+            
+            echo "Attempting pull..."
             git pull origin main
+            
+            echo "Git log (last 2 commits):"
+            git log -2
+            
+            echo "Removing old build artifacts..."
             rm -rf node_modules package-lock.json build/
+            
+            echo "Installing dependencies..."
             npm install
+            
+            echo "Building site..."
             npm run build
+            
+            echo "Contents of build directory:"
+            ls -la build/
