@@ -28,3 +28,19 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.button--hero {
+  color: white;
+  border: 3px solid white;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.button--hero:hover {
+  color: #cd2e16;
+  background-color: white;
+  border: 3px solid white;
+  text-decoration: none;
+}

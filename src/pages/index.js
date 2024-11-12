@@ -18,9 +18,9 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button--hero"
             to="/docs/snowflake">
-            Tempo Tutorial - 15min ⏱️
+            Tempo Tutorial - 15min
           </Link>
         </div>
       </div>
