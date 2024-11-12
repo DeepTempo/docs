@@ -8,10 +8,11 @@ This guide walks you through setting up and using the core functionalities of th
 
 ## Initial Setup
 1. **Create Resources**
+
    ```sql
    CALL management.create_resources();
    ```
-   This initializes the application by loading model weights and configurations.
+This initializes the application by loading model weights and configurations.
 
 ## Core Functionalities
 
@@ -32,10 +33,22 @@ To investigate specific sequences flagged as anomalies, use the sequence ID from
 ### 2. Automated Detection
 
 #### Setting Up Automated Inference
-To start automated inference, provide the fully qualified name (FQN) of the source table and the slot number where the table is referenced. The time period for auto inference is set internally to 8:00am UTC.
+To start automated inference, provide the fully qualified name (FQN) of the database.schema.table_name and the slot number where the table is referenced. The time period for auto inference is set internally to 8:00am UTC. 
+
+1. **Enable Change Tracking and Set Permissions**
+Before running automated inference, ensure that change tracking and permissions are configured for the table you want to use for time-based automated detections. Replace `database.schema.table_name` with your own database, schema, and table name that was set to be referenced the specific slot you chose.
+
+   ```sql
+   ALTER TABLE database.schema.table_name SET CHANGE_TRACKING = TRUE;
+   GRANT USAGE ON DATABASE database TO APPLICATION tempo;
+   GRANT USAGE ON SCHEMA database.schema TO APPLICATION tempo;
+   GRANT SELECT ON TABLE database.schema.table_name TO APPLICATION tempo;
+   ```
+2. **Call the prcoedure**
+
    ```sql
    CALL automated_detection.start_automated_inference(
-       'source_table_name',
+       'database.schema.table_name',
        slot_number
    );
    ```
