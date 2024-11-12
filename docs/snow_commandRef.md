@@ -1,4 +1,4 @@
-# Snowflake Tempo Application Command Reference
+# Snowflake Tempo Command Reference
 
 ## Resource Management
 
