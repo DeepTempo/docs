@@ -86,7 +86,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://app.snowflake.com/marketplace/data-products/search?search=tempo',
+            href: 'https://app.snowflake.com/marketplace/listing/GZTYZOYXHNX/deeptempo-cybersecurity-tempo-cybersecurity-incident-identification-via-deep-learning?search=tempo',
             label: 'Snowflake',
             position: 'right',
           },
