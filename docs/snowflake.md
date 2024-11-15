@@ -6,7 +6,7 @@ This guide walks you through setting up and using the core functionalities of th
 ## Prerequisites
 - Ensure you have the same permissions for warehouse, compute pool, and task management to use Tempo.
 
-If you would rather use the snowflake solution guide you can find it at [this link](https://quickstarts.snowflake.com/guide/getting_started_with_tempo_and_snowflake/index.html#0). 
+If you would rather use the Snowflake solution guide you can find it at [this link](https://quickstarts.snowflake.com/guide/getting_started_with_tempo_and_snowflake/index.html#0). 
 
 ## 1. Launching the App
 
@@ -18,13 +18,13 @@ To select your table please click `add` next to the `on Incident Inference Logs`
 
 Note: If you are running with the demo data simply skip this step and continue. 
 
-Snowflake will require you to grant permissions to run this app.  For a smooth experiance make sure you do this in the initial setup.
+Snowflake will require you to grant permissions to run this app.  For a smooth experience make sure you do this in the initial setup.
 
-Next go to the `Projects>Worksheets` consol in Snowfalke. Here you should see a `+` sign in the top right corner of the screen.  We will use this to create our own worksheets. Go ahead and click it now. 
+Next go to the `Projects>Worksheets` console in Snowflake. Here you should see a `+` sign in the top right corner of the screen.  We will use this to create our own worksheets. Go ahead and click it now. 
 
 ## 2. Resource Management
 
-In the new worksheet we now need to setup our procedures. We will start with initiallizing the container resources. Thorught this guide we will provide you with satements to run.  Please add them to the sheet. You can do these one by one or add them all to a single worksheet.
+In the new worksheet we now need to setup our procedures. We will start with initializing the container resources. Throughout this guide we will provide you with statements to run.  Please add them to the sheet. You can do these one by one or add them all to a single worksheet.
 
 ### Initialize Application Resources
 ```sql
@@ -60,11 +60,11 @@ CALL automated_detection.start_automated_inference(
 );
 ```
 Parameters:
-- `source_table_name`: Fully qualified name of the source table (string).  This should be the same name as the table you will want to run against.  If you selected your own data in the setup phase you will need to pass in the full table name in the format `database.schema.tablename`.  To do this easlily highlight `source_table_name` and doubleclick the table you want to add in the nowflake pannel on the left. 
+- `source_table_name`: Fully qualified name of the source table (string).  This should be the same name as the table you will want to run against.  If you selected your own data in the setup phase you will need to pass in the full table name in the format `database.schema.tablename`.  To do this easlily highlight `source_table_name` and doubleclick the table you want to add in the Snowflake pannel on the left. 
 - `slot_number`: Reference slot number (integer). This is how we map the data to the job. We assign data to each slot and then reference the slot in each job. 
 Notes:
 - If you do static infernace the job will run when you deploy.  If you use automatic inference it will be Scheduled for 8:00am UTC daily
-- When you add a table to a slot our app will create a stream to corrisponding to the slot number. Stream names are automatically generated based on slot numbers:
+- When you add a table to a slot our app will create a stream to corresponding to the slot number. Stream names are automatically generated based on slot numbers:
   - Slot 1: `stream_one_interactions`
   - Slot 2: `stream_two_interactions`
   - Slot 3: `stream_three_interactions`
