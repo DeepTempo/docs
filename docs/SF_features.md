@@ -23,7 +23,7 @@ The above features can be exported from network monitoring tools such as NetFlow
 
 <div style="text-align: center;">
   <img src="../static/img/input_data_sample.png" alt="Sample input data" title="Sample input data">
-  <p><strong>Figure 1:</strong> Sample input data</p>
+  <p><strong>Sample input data</strong> </p>
 </div>
 
 
