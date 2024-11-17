@@ -20,7 +20,12 @@ To run inference on your dataset, please ensure the following features are liste
 | label          | Required if fine-tuning. Indicates if flow is suspicious marked as 'MALICIOUS' or if normal marked as 'BENIGN' |
 
 The above features can be exported from network monitoring tools such as NetFlow, Wireshark, Zeek, SolarWinds or AWS/GCP Flow logs
-<!-- add picture of sample input data (prob .head() from finetune dataset)-->
+
+<div style="text-align: center;">
+  <img src="../static/img/input_data_sample.png" alt="Sample input data" title="Sample input data">
+  <p><strong>Figure 1:</strong> Sample input data</p>
+</div>
+
 
 #### Adding a uid-device mapping
 If the device type of the uids/IPs provided in the 'src_ip' or 'dest_ip' is known, it can be categorized into one of 
@@ -39,7 +44,7 @@ certain device types operate within your network
 
 
 <!-- give description of output results esp start_time, end_time, num_connection (prob ask josiah) -->
-<!-- add picture of sample output -->
+<!-- add picture of sample output it should be one from a SF run -->
 
 
 
