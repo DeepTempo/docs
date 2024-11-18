@@ -56,12 +56,32 @@ If you want to use the demo feel free to name it something like `demorun` for th
 ```sql
 CALL automated_detection.start_automated_inference(
     'source_table_name',
-    slot_number
+    slot_number,
+    refresh_time
 );
 ```
 Parameters:
 - `source_table_name`: Fully qualified name of the source table (string).  This should be the same name as the table you will want to run against.  If you selected your own data in the setup phase you will need to pass in the full table name in the format `database.schema.tablename`.  To do this easlily highlight `source_table_name` and doubleclick the table you want to add in the Snowflake pannel on the left. 
-- `slot_number`: Reference slot number (integer). This is how we map the data to the job. We assign data to each slot and then reference the slot in each job. 
+- `slot_number`: Reference slot number (integer). This is how we map the data to the job. We assign data to each slot and then reference the slot in each job.
+- `refresh_time`: Task Execution Schedule (Cron Format). This defines the schedule for task execution using cron format. It consists of five fields specifying: 
+
+    ```
+    # __________ minute (0-59)
+    # | ________ hour (0-23)
+    # | | ______ day of month (1-31, or L)
+    # | | | ____ month (1-12, JAN-DEC)
+    # | | | | _ day of week (0-6, SUN-SAT, or L)
+    # | | | | |
+    # | | | | |
+      * * * * *
+    ```
+    
+    #### Examples:
+    - `0 0 * * *`: Runs daily at midnight.  
+    - `*/15 9-17 * * MON-FRI`: Every 15 minutes, 9 AM–5 PM, Monday to Friday.  
+    - `30 23 L * *`: Runs at 11:30 PM on the last day of the month.  
+
+Use to automate periodic tasks efficiently.
 Notes:
 - If you do static infernace the job will run when you deploy.  If you use automatic inference it will be Scheduled for 8:00am UTC daily
 - When you add a table to a slot our app will create a stream to corresponding to the slot number. Stream names are automatically generated based on slot numbers:
