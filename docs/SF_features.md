@@ -22,7 +22,7 @@ To run inference on your dataset, please ensure the following features are liste
 The above features can be exported from network monitoring tools such as NetFlow, Wireshark, Zeek, SolarWinds or AWS/GCP Flow logs
 
 <div style="text-align: center;">
-  <img src="../static/img/input_data_sample.png" alt="Sample input data" title="Sample input data">
+  <img src="../static/img/input_data_sample.png" alt="Sample input data" title="Sample input data"></img>
   <p><strong>Sample input data</strong> </p>
 </div>
 
