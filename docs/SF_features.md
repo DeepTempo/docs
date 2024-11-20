@@ -2,10 +2,6 @@
 
 ## Using your data
 To run inference on your dataset, please ensure the following features are listed
-<!-- updates to make (get josiah inputs)-->
-<!-- should we use flow or event to describe a data point? -->
-<!-- does returning an output showing each ip_ip connection give away our sequence generation? -->
-<!-- update output to show just the malicious -->
 
 | **Feature**        | **Description**                                                                                                |
 |--------------------|----------------------------------------------------------------------------------------------------------------|
@@ -59,8 +55,6 @@ certain device types operate within your network
 | **dest_device**    | The device type assigned to the `dest_ip` in the UID-device mapping, or `unknown` if not provided. |
 | **classification** | The model's result, indicating whether the flow is marked as 'MALICIOUS' or 'BENIGN'.              |
 
-
-<!-- add picture of sample output it should be one from a SF run -->
 
 
 
