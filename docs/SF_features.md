@@ -1,4 +1,6 @@
-### Using your data
+# Snowflake Features
+
+## Using your data
 To run inference on your dataset, please ensure the following features are listed
 <!-- updates to make (get josiah inputs)-->
 <!-- should we use flow or event to describe a data point? -->
@@ -27,7 +29,7 @@ The above features can be exported from network monitoring tools such as NetFlow
 </div>
 
 
-#### Adding a uid-device mapping
+## Adding a uid-device mapping
 If the device type of the uids/IPs provided in the 'src_ip' or 'dest_ip' is known, it can be categorized into one of 
 the following: 
 
