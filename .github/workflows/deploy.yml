@@ -48,8 +48,8 @@ jobs:
             echo "Git log (last 2 commits):"
             git log -2
             
-            echo "Removing old build artifacts..."
-            rm -rf node_modules package-lock.json build/
+            # echo "Removing old build artifacts..."
+            # rm -rf node_modules package-lock.json build/
             
             echo "Installing dependencies..."
             npm install
