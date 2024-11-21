@@ -137,7 +137,7 @@ Purpose: Updates model based on tuning log data from the reference page
 
 ### Model Rollback
 ```sql
-CALL management.model_rollback(integer);
+CALL management.model_rollback(version);
 ```
 Removes the specified version of the model and its metadata from the app.
 
