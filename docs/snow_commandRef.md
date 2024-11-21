@@ -79,6 +79,16 @@ Parameters:
 - `service_name`: Name of the service for model tuning (string)
 Purpose: Updates model based on tuning log data from the reference page
 
+### Model Rollback
+```sql
+CALL management.model_rollback(version);
+```
+Parameters: 
+- `version`: The integer version number of the model to be rolled back.
+Purpose: Removes the specified version of the model and its metadata from the app.
+
+
+
 ## Notes
 - All commands require appropriate permissions for warehouse, compute pool, and task management
 - The management console is accessible via the Streamlit dashboard
