@@ -46,7 +46,7 @@ From the top of the worksheet there should be a dropdown called `Select Database
 ```sql
 CALL static_detection.inference('your_service_name');
 ```
-Parameters:
+**Parameters:**
 - `your_service_name`: Name of the service to analyze (string).  This is set by you and should be unique to each run.
 Purpose: Executes inference on specified service data
 
@@ -59,7 +59,7 @@ CALL automated_detection.start_automated_inference(
     slot_number
 );
 ```
-Parameters:
+**Parameters:**
 - `source_table_name`: Fully qualified name of the source table (string).  This should be the same name as the table you will want to run against.  If you selected your own data in the setup phase you will need to pass in the full table name in the format `database.schema.tablename`.  To do this easlily highlight `source_table_name` and doubleclick the table you want to add in the Snowflake pannel on the left. 
 - `slot_number`: Reference slot number (integer). This is how we map the data to the job. We assign data to each slot and then reference the slot in each job. 
 Notes:
@@ -73,7 +73,7 @@ Notes:
 ```sql
 CALL inspect.deepdive(sequence_id);
 ```
-Parameters:
+**Parameters:**
 - `sequence_id`: Identifier of the sequence to analyze (integer). This ID can be used down the road if any anomalies are detected to run deeper investigation on suspicious interactions. 
 Purpose: Investigates specific sequences flagged as anomalies
 
@@ -86,7 +86,7 @@ If you want to effect a job that is running you can use the following optional c
 ```sql
 CALL automated_detection.alter_automated_inference('stream_name', 'action');
 ```
-Parameters:
+**Parameters:**
 - `stream_name`: Name of the stream to manage (string). This was defined in the previous step.
 - `action`: One of the following (string):
   - `'suspend'`: Pause inference while maintaining stream updates
@@ -111,9 +111,25 @@ CALL automated_detection.alter_automated_inference('stream_one_interactions', 's
 ```sql
 CALL model_optimization.tune_model('service_name');
 ```
-Parameters:
+**Parameters:**
 - `service_name`: Name of the service for model tuning (string)
 Purpose: Updates model based on tuning log data from the reference page
+
+### Model Rollback
+**Usage Example:**  
+```sql
+CALL management.model_rollback(integer);
+```
+Removes the specified version of the model and its metadata from the app.
+
+**Parameters:**  
+- `version`: The integer version number of the model to be rolled back.
+
+**Usage Example:**  
+```sql
+CALL management.model_rollback(3);
+```
+
 
 ## Notes
 - All commands require appropriate permissions for warehouse, compute pool, and task management
