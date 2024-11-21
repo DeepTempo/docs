@@ -116,7 +116,6 @@ CALL model_optimization.tune_model('service_name');
 Purpose: Updates model based on tuning log data from the reference page
 
 ### Model Rollback
-**Usage Example:**  
 ```sql
 CALL management.model_rollback(integer);
 ```
