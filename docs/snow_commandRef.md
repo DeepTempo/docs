@@ -77,6 +77,7 @@ CALL model_optimization.tune_model('service_name');
 ```
 Parameters:
 - `service_name`: Name of the service for model tuning (string)
+
 Purpose: Updates model based on tuning log data from the reference page
 
 ### Model Rollback
@@ -85,6 +86,7 @@ CALL management.model_rollback(version);
 ```
 Parameters: 
 - `version`: The integer version number of the model to be rolled back.
+  
 Purpose: Removes the specified version of the model and its metadata from the app.
 
 
