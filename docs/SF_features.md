@@ -19,6 +19,10 @@ To run inference on your dataset, please ensure the following features are liste
 
 The above features can be exported from network monitoring tools such as NetFlow, Wireshark, Zeek, SolarWinds or AWS/GCP Flow logs
 
+#### sample input data
+![sample input data](./assets/input_data_sample.png)
+
+
 ## Adding a uid-device mapping
 If the device type of the uids/IPs provided in the 'src_ip' or 'dest_ip' is known, it can be categorized into one of 
 the following: 
@@ -34,6 +38,25 @@ the following:
 Providing a uid to device mapping can help enhance the resulting output by providing more information into how 
 certain device types operate within your network
 
+#### sample uid-device mapping
+```json
+{
+    "192.x.x.3": "dns",
+    "192.x.x.50": "webserver",
+    "205.x.x.68": "webserver",
+    "192.x.x.51": "ubuntu",
+    "205.x.x.66": "ubuntu",
+    "192.x.x.17": "firewall",
+    "192.x.x.16": "firewall",
+    "192.x.x.9": "workstation",
+    "192.x.x.5": "workstation",
+    "192.x.x.8": "workstation",
+    "192.x.x.14": "workstation",
+    "195.x.x.55": "dns",
+    "68810583-72a000813f68": "dns",
+    "cff90ebf-cd24": "webserver"
+}
+```
 
 ### Understanding the result
 | **Feature**        | **Description**                                                                                    |
