@@ -1,7 +1,7 @@
 # Snowflake Quickstart Guide
 
 ## Overview
-This guide walks you through setting up and using the core functionalities of Tempo, a comprehensive application for automated incendent detection.
+This guide walks you through setting up and using Tempo, a application for automated incendent detection using deep learning.
 
 ## Prerequisites
 - Ensure you have the same permissions for warehouse, compute pool, and task management to use Tempo.
