@@ -22,7 +22,11 @@ Snowflake will require you to grant permission to run this app.  For a smooth ex
 
 Next go to the `Projects>Worksheets` console in Snowflake. Here you should see a `+` sign in the top right corner of the screen.  We will use this to create our own worksheets. Go ahead and click it now. 
 
-## 2. Resource Management
+## 2. Select Database
+
+From the top of the worksheet there should be a dropdown called `Select Databases`.  This is what you will use to attach our database to this worksheet.  If you are using demo data select the option with TEMPO at the beginning of it's name.
+
+## 3. Resource Management
 
 In the new worksheet we now need to setup our procedures. We will start with initializing the container resources. Throughout this guide we will provide you with statements to run.  Please add them to the sheet. You can do these one by one or add them all to a single worksheet.
 
@@ -34,11 +38,6 @@ Purpose: Initializes the application by loading required model weights and confi
 Required Permissions: Warehouse, compute pool, and task management access
 
 It is recommended that you run this command before running the sheet as a whole.  It can take some time for the resources to spin up.  If you are the account admin you can monitor resources using `SHOW COMPUTE POOLS IN ACCOUNT;`. Once the compute pools are idle you may continue with the rest of the worksheet.
-
-
-## 3. Select Database
-
-From the top of the worksheet there should be a dropdown called `Select Databases`.  This is what you will use to attach our database to this worksheet.  If you are using demo data select the option with TEMPO at the beginning of it's name.
 
 ## 4. Detection
 
@@ -52,43 +51,6 @@ Purpose: Executes inference on specified service data
 
 If you want to use the demo feel free to name it something like `demorun` for the `your_service_name`.
 
-### Start Automated Inference
-```sql
-CALL automated_detection.start_automated_inference(
-    'source_table_name',
-    slot_number,
-    refresh_time
-);
-```
-**Parameters:**
-- `source_table_name`: Fully qualified name of the source table (string).  This should be the same name as the table you will want to run against.  If you selected your own data in the setup phase you will need to pass in the full table name in the format `database.schema.tablename`.  To do this easlily highlight `source_table_name` and doubleclick the table you want to add in the Snowflake pannel on the left. 
-- `slot_number`: Reference slot number (integer). This is how we map the data to the job. We assign data to each slot and then reference the slot in each job.
-- `refresh_time`: Task Execution Schedule (Cron Format). This defines the schedule for task execution using cron format. It consists of five fields specifying: 
-
-    ```
-    # __________ minute (0-59)
-    # | ________ hour (0-23)
-    # | | ______ day of month (1-31, or L)
-    # | | | ____ month (1-12, JAN-DEC)
-    # | | | | _ day of week (0-6, SUN-SAT, or L)
-    # | | | | |
-    # | | | | |
-      * * * * *
-    ```
-    
-    #### Examples:
-    - `0 0 * * *`: Runs daily at midnight.  
-    - `*/15 9-17 * * MON-FRI`: Every 15 minutes, 9 AM–5 PM, Monday to Friday.  
-    - `30 23 L * *`: Runs at 11:30 PM on the last day of the month.  
-
-Use this to automate periodic tasks efficiently.
-Notes:
-- If you do static inference the job will run when you deploy.  If you use automatic inference it will be Scheduled for 8:00am UTC daily
-- When you add a table to a slot our app will create a stream to corresponding to the slot number. Stream names are automatically generated based on slot numbers:
-  - Slot 1: `stream_one_interactions`
-  - Slot 2: `stream_two_interactions`
-  - Slot 3: `stream_three_interactions`
-
 ## 5. Deep Dive Analysis
 ```sql
 CALL inspect.deepdive(sequence_id);
@@ -98,58 +60,6 @@ CALL inspect.deepdive(sequence_id);
 Purpose: Investigate specific sequences flagged as anomalies
 
 Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
-
-## 6. Manage Automated Inference (Optional)
-
-If you want to affect a job that is running you can use the following optional command and parameters to control active jobs. 
-
-```sql
-CALL automated_detection.alter_automated_inference('stream_name', 'action');
-```
-**Parameters:**
-- `stream_name`: Name of the stream to manage (string). This was defined in the previous step.
-- `action`: One of the following (string):
-  - `'suspend'`: Pause inference while maintaining stream updates
-  - `'resume'`: Restart paused inference
-  - `'stop'`: Terminate inference and clear source data
-
-Example Usage:
-```sql
--- Suspend stream
-CALL automated_detection.alter_automated_inference('stream_one_interactions', 'suspend');
-
--- Resume stream
-CALL automated_detection.alter_automated_inference('stream_one_interactions', 'resume');
-
--- Stop stream
-CALL automated_detection.alter_automated_inference('stream_one_interactions', 'stop');
-```
-
-## 7. Model Optimization
-
-### Fine-tune Model
-```sql
-CALL model_optimization.tune_model('service_name');
-```
-**Parameters:**
-- `service_name`: Name of the service for model tuning (string)
-Purpose: Updates model based on tuning log data from the reference page
-
-### Model Rollback
-```sql
-CALL management.model_rollback(version);
-```
-Removes the specified version of the model and its metadata from the app.
-
-**Parameters:**  
-- `version`: The integer version number of the model to be rolled back.
-
-**Usage Example:**  
-```sql
-CALL management.model_rollback(3);
-```
-
-Warning: THIS ACTION CAN NOT BE UNDONE!!!  Rolling back will remove all models after the version you roll back to. 
 
 ## Notes
 - All commands require appropriate permissions for warehouse, compute pool, and task management
