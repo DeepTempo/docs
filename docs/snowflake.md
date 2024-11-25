@@ -1,7 +1,7 @@
 # Snowflake Quickstart Guide
 
 ## Overview
-This guide walks you through setting up and using the core functionalities of the Tempo application, a comprehensive system for model inference, optimization, and automated detection.
+This guide walks you through setting up and using the core functionalities of Tempo, a comprehensive application for automated incendent detection.
 
 ## Prerequisites
 - Ensure you have the same permissions for warehouse, compute pool, and task management to use Tempo.
@@ -11,14 +11,14 @@ If you would rather use the Snowflake solution guide you can find it at [this li
 ## 1. Launching the App
 
 ### Find The App
-In the Snowflake app marketplace you can find the tempo app or you may click [Here](https://app.snowflake.com/marketplace/listing/GZTYZOYXHNX/deeptempo-cybersecurity-tempo-cybersecurity-incident-identification-via-deep-learning?search=tempo).  
+In the Snowflake app Marketplace you can find the Tempo app or simply click [Here](https://app.snowflake.com/marketplace/listing/GZTYZOYXHNX/deeptempo-cybersecurity-tempo-cybersecurity-incident-identification-via-deep-learning?search=tempo).  
 
-If you are running on your own data you will have the select the storage before clicking the launch app button in the deployment phase.
+Improtantly - if you would like to run Tempo on your own data please select the correct storage before clicking the launch app button in the deployment phase.
 To select your table please click `add` next to the `on Incident Inference Logs` section. In the popup after clicking the `add` button click the `+Select Data` button and find the table you want to use on the dropdown.  Select it and click `Save`.
 
-Note: If you are running with the demo data simply skip this step and continue. 
+Note: You can also use the demo data that we provide, which is based upon data from the Canadian Institute of Cybersecurity.  If you are using the demo data simply skip this step and continue. 
 
-Snowflake will require you to grant permissions to run this app.  For a smooth experience make sure you do this in the initial setup.
+Snowflake will require you to grant permission to run this app.  For a smooth experience make sure you do this in the initial setup.
 
 Next go to the `Projects>Worksheets` console in Snowflake. Here you should see a `+` sign in the top right corner of the screen.  We will use this to create our own worksheets. Go ahead and click it now. 
 
@@ -33,7 +33,7 @@ CALL management.create_resources();
 Purpose: Initializes the application by loading required model weights and configurations
 Required Permissions: Warehouse, compute pool, and task management access
 
-If it is recommended that you run this command prior to running the sheet as a whole.  It can take some time for the resources to spin up.  If you are the account admin you can monitor resources using `SHOW COMPUTE POOLS IN ACCOUNT;`. Once the compute pools are idle you may continue with the rest of the worksheet.
+It is recommended that you run this command before running the sheet as a whole.  It can take some time for the resources to spin up.  If you are the account admin you can monitor resources using `SHOW COMPUTE POOLS IN ACCOUNT;`. Once the compute pools are idle you may continue with the rest of the worksheet.
 
 
 ## 3. Select Database
@@ -81,9 +81,9 @@ CALL automated_detection.start_automated_inference(
     - `*/15 9-17 * * MON-FRI`: Every 15 minutes, 9 AM–5 PM, Monday to Friday.  
     - `30 23 L * *`: Runs at 11:30 PM on the last day of the month.  
 
-Use to automate periodic tasks efficiently.
+Use this to automate periodic tasks efficiently.
 Notes:
-- If you do static infernace the job will run when you deploy.  If you use automatic inference it will be Scheduled for 8:00am UTC daily
+- If you do static inference the job will run when you deploy.  If you use automatic inference it will be Scheduled for 8:00am UTC daily
 - When you add a table to a slot our app will create a stream to corresponding to the slot number. Stream names are automatically generated based on slot numbers:
   - Slot 1: `stream_one_interactions`
   - Slot 2: `stream_two_interactions`
@@ -95,13 +95,13 @@ CALL inspect.deepdive(sequence_id);
 ```
 **Parameters:**
 - `sequence_id`: Identifier of the sequence to analyze (integer). This ID can be used down the road if any anomalies are detected to run deeper investigation on suspicious interactions. 
-Purpose: Investigates specific sequences flagged as anomalies
+Purpose: Investigate specific sequences flagged as anomalies
 
-Note: If running on demo data lets use 2 as the id (valid IDs 1-1200)
+Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
 
 ## 6. Manage Automated Inference (Optional)
 
-If you want to effect a job that is running you can use the following optional command and parameters to control active jobs. 
+If you want to affect a job that is running you can use the following optional command and parameters to control active jobs. 
 
 ```sql
 CALL automated_detection.alter_automated_inference('stream_name', 'action');
@@ -149,6 +149,7 @@ Removes the specified version of the model and its metadata from the app.
 CALL management.model_rollback(3);
 ```
 
+Warning: THIS ACTION CAN NOT BE UNDONE!!!  Rolling back will remove all models after the version you roll back to. 
 
 ## Notes
 - All commands require appropriate permissions for warehouse, compute pool, and task management
