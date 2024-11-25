@@ -38,6 +38,7 @@ CALL management.create_resources();
 Initializes the application by loading required model weights and configurations
 Required Permissions: Warehouse, compute pool, and task management access
 
+#### Note:
 It is recommended that you run this command before running the sheet as a whole.  It can take some time for the resources to spin up.  If you are the account admin you can monitor resources using `SHOW COMPUTE POOLS IN ACCOUNT;`. Once the compute pools are idle you may continue with the rest of the worksheet.
 
 ## 4. Detection
