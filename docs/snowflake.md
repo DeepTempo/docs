@@ -34,7 +34,8 @@ In the new worksheet we now need to setup our procedures. We will start with ini
 ```sql
 CALL management.create_resources();
 ```
-Purpose: Initializes the application by loading required model weights and configurations
+#### Purpose: 
+Initializes the application by loading required model weights and configurations
 Required Permissions: Warehouse, compute pool, and task management access
 
 It is recommended that you run this command before running the sheet as a whole.  It can take some time for the resources to spin up.  If you are the account admin you can monitor resources using `SHOW COMPUTE POOLS IN ACCOUNT;`. Once the compute pools are idle you may continue with the rest of the worksheet.
@@ -47,7 +48,8 @@ CALL static_detection.inference('your_service_name');
 ```
 **Parameters:**
 - `your_service_name`: Name of the service to analyze (string).  This is set by you and should be unique to each run.
-Purpose: Executes inference on specified service data
+#### Purpose: 
+Executes inference on specified service data
 
 If you want to use the demo feel free to name it something like `demorun` for the `your_service_name`.
 
@@ -57,7 +59,8 @@ CALL inspect.deepdive(sequence_id);
 ```
 **Parameters:**
 - `sequence_id`: Identifier of the sequence to analyze (integer). This ID can be used down the road if any anomalies are detected to run deeper investigation on suspicious interactions. 
-Purpose: Investigate specific sequences flagged as anomalies
+#### Purpose: 
+Investigate specific sequences flagged as anomalies
 
 Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
 
