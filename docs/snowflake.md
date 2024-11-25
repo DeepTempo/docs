@@ -67,5 +67,4 @@ Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
 - Reference data can be managed through the web-based management interface
 
 
-To dive deeper look at 
-
+To dive deeper click Next.
