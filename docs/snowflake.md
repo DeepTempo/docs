@@ -65,3 +65,7 @@ Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
 - All commands require appropriate permissions for warehouse, compute pool, and task management
 - The management console is accessible via the Streamlit dashboard
 - Reference data can be managed through the web-based management interface
+
+
+To dive deeper look at 
+
