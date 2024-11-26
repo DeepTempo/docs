@@ -6,6 +6,8 @@ This guide walks you through setting up and using Tempo, a application for autom
 ## Prerequisites
 - Ensure you have the same permissions for warehouse, compute pool, and task management to use Tempo.
 
+![permissions page](assets/tempo_permissions.png)
+
 If you would rather use the Snowflake solution guide you can find it at [this link](https://quickstarts.snowflake.com/guide/getting_started_with_tempo_and_snowflake/index.html#0). 
 
 ## 1. Launching the App
@@ -16,6 +18,8 @@ In the Snowflake app Marketplace you can find the Tempo app or simply click [Her
 Improtantly - if you would like to run Tempo on your own data please select the correct storage before clicking the launch app button in the deployment phase.
 To select your table please click `add` next to the `on Incident Inference Logs` section. In the popup after clicking the `add` button click the `+Select Data` button and find the table you want to use on the dropdown.  Select it and click `Save`.
 
+![reference page](assets/reference_page.png)
+
 Note: You can also use the demo data that we provide, which is based upon data from the Canadian Institute of Cybersecurity.  If you are using the demo data simply skip this step and continue. 
 
 Snowflake will require you to grant permission to run this app.  For a smooth experience make sure you do this in the initial setup.
@@ -25,6 +29,8 @@ Next go to the `Projects>Worksheets` console in Snowflake. Here you should see a
 ## 2. Select Database
 
 From the top of the worksheet there should be a dropdown called `Select Databases`.  This is what you will use to attach our database to this worksheet.  If you are using demo data select the option with TEMPO at the beginning of it's name.
+
+![database_selection](assets/database_selection.png)
 
 ## 3. Resource Management
 
