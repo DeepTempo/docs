@@ -24,7 +24,9 @@ Note: You can also use the demo data that we provide, which is based upon data f
 
 Snowflake will require you to grant permission to run this app.  For a smooth experience make sure you do this in the initial setup.
 
-Next go to the `Projects>Worksheets` console in Snowflake. Here you should see a `+` sign in the top right corner of the screen.  We will use this to create our own worksheets. Go ahead and click it now. 
+Once the app is running you will be brought to the management interface. This while be importat if you get into advanced opperations. For now we need to build a worksheet.
+
+Go to the `Projects>Worksheets` console in Snowflake. Here you should see a `+` sign in the top right corner of the screen.  We will use this to create our own worksheets. Go ahead and click it now. 
 
 ## 2. Select Database
 
