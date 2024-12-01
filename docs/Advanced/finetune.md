@@ -64,6 +64,8 @@ CALL STATIC_DETECTION.evaluation();
 
 # Fine-tuning the Model
 
+If you want to increase the accuracy by tuning the model to your own network you can use the following commands.
+
 ```sql
 CALL model_optimization.tune_model('service_name');
 ```
