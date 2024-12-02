@@ -23,15 +23,16 @@ const sidebars = {
         'Advanced/finetune',
       ],
     },
+    'SF_features',
+    'snow_commandRef',
+
     {
       type: 'category',
       label: 'Visualizations',
       items: [
         'Visualizations/Splunk',
       ],
-    },
-    'SF_features',
-    'snow_commandRef'
+    }
   ],
 };
 
