@@ -3,7 +3,7 @@
 ## Overview
 In the field of event detection, traditional rule-based systems have dominated for years. While these systems have served their purpose, they come with significant limitations. Their rigid structure makes them inflexible, and their bulky nature often makes them difficult to manage. More importantly, these systems frequently fail to identify critical events, requiring constant manual intervention and maintenance to stay effective.
 
-This guide introduces Tempo, a modern solution that leverages deep learning for automated incident detection. By moving beyond conventional rule-based approaches, Tempo offers a more sophisticated and adaptable way to identify and respond to events. The following sections will walk you through the setup process and demonstrate how to effectively utilize Tempo's capabilities for your event detection needs.
+This guide introduces Tempo, a modern solution that leverages deep learning for incident detection. By moving beyond conventional rule-based approaches, Tempo offers a more sophisticated and adaptable way to identify and respond to events. The following sections will walk you through the setup process and demonstrate how to effectively utilize Tempo's capabilities for your event classification needs.
 
 ## Prerequisites
 - Grant Tempo necessary permissions including creating necessary warehouses and compute pools.
