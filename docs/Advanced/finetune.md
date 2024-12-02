@@ -1,5 +1,7 @@
 # Fine-tune Model
 
+To access fine-tuning features, contact support@DeepTempo.ai for activation.
+
 #### When to Consider Fine-Tuning
 
 Our baseline model provides robust performance across many use cases. However, fine-tuning can be beneficial in specific scenarios:
@@ -7,25 +9,16 @@ Our baseline model provides robust performance across many use cases. However, f
 #### Performance Evaluation Workflow
 
 1. Initial Assessment
-
    - Start by testing the baseline model on a representative subset of your data using the [Evaluation function](#performance-evaluation)
-
    - Collect performance metrics:
-
      - Accuracy rate
-
      - False Negative and Positive rate (F1 Score)
-
      - Recall
 
 2. Decision Criteria for Fine-Tuning
-
    - Consider fine-tuning if:
-
      - Baseline model accuracy falls below 85-90%
-
      - Low F1 Score
-
      - Critical domain-specific patterns are consistently missed
 
 ### Computational Considerations
@@ -41,9 +34,7 @@ Our baseline model provides robust performance across many use cases. However, f
   | Large (1M+ samples)  |  > 0.1                    | > 0.1                |
  
 - Resources in use: 
-
   - Compute Pool: GPU_NV_S (0.57 CpH)
-
   - Warehouse size : Medium (4 CpH)
 
 > **Note:** *[CpH](https://www.snowflake.com/legal-files/CreditConsumptionTable.pdf) refers to credits per hour* 
@@ -54,13 +45,11 @@ You can evaluate model performance using the `CALL STATIC_DETECTION.evaluation()
 
 1. Assign a labeled data table to the evaluation reference within the reference table.  
 
-
 2. Run the `STATIC_DETECTION.evaluation()` procedure to generate performance metrics based on the assigned data.
 
 ```sql
 CALL STATIC_DETECTION.evaluation();
 ```
-
 
 # Fine-tuning the Model
 
@@ -71,7 +60,9 @@ CALL model_optimization.tune_model('service_name');
 ```
 **Parameters:**
 - `service_name`: Name of the service for model tuning (string)
+
 Purpose: Updates model based on tuning log data from the reference page
+![reference page](../assets/reference_page.png)
 
 ### Model Rollback
 ```sql
