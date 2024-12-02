@@ -71,6 +71,13 @@ CALL automated_detection.alter_automated_inference('stream_one_interactions', 's
 
 ## Model Optimization
 
+### Model Evaluation
+
+```sql
+CALL static_detection.evaluation();
+```
+Purpose: Evaluates the model's effectiveness using labeled user data to determine if the base model is suitable for the given use case.
+
 ### Fine-tune Model
 ```sql
 CALL model_optimization.tune_model('service_name');
