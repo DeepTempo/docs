@@ -30,7 +30,6 @@ This section guides you through setting up Splunk Enterprise to analyze the outp
    ```
 
 ### Configure Splunk and Load Data
-Duration: 3
 
 1. Access Splunk at `http://your_ip:8000` and log in with the credentials you set.
 
@@ -41,7 +40,6 @@ Duration: 3
 4. Follow the prompts to load the CSV, using default options.
 
 ### Create the Dashboard
-Duration: 2
 
 1. After loading the CSV, click "Build Dashboards" > "Create New Dashboard".
 
