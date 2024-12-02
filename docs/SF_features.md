@@ -1,6 +1,5 @@
-# Snowflake Features
+# Use Your Own Data
 
-## Using your data
 To run inference on your dataset, please ensure the following features are listed
 
 | **Feature**        | **Description**                                                                                                |
@@ -37,6 +36,8 @@ the following:
 
 Providing a uid to device mapping can help enhance the resulting output by providing more information into how 
 certain device types operate within your network
+
+For advanced operations it may be useful to use Tempo itself to resolve entities; if you are interested in this and other approaches to improving the accuracy and usefulness of Tempo, please reach out.
 
 #### sample uid-device mapping
 ```json
