@@ -1,10 +1,12 @@
 # Snowflake Quickstart Guide
 
 ## Overview
-This guide walks you through setting up and using Tempo, a application for automated incendent detection using deep learning.
+In the field of event detection, traditional rule-based systems have dominated for years. While these systems have served their purpose, they come with significant limitations. Their rigid structure makes them inflexible, and their bulky nature often makes them difficult to manage. More importantly, these systems frequently fail to identify critical events, requiring constant manual intervention and maintenance to stay effective.
+
+This guide introduces Tempo, a modern solution that leverages deep learning for automated incident detection. By moving beyond conventional rule-based approaches, Tempo offers a more sophisticated and adaptable way to identify and respond to events. The following sections will walk you through the setup process and demonstrate how to effectively utilize Tempo's capabilities for your event detection needs.
 
 ## Prerequisites
-- Ensure you have the same permissions for warehouse, compute pool, and task management to use Tempo.
+- Grant Tempo necessary permissions including creating necessary warehouses and compute pools.
 
 ![permissions page](assets/tempo_permissions.png)
 
@@ -20,11 +22,11 @@ To select your table please click `add` next to the `on Incident Inference Logs`
 
 ![reference page](assets/reference_page.png)
 
-Note: You can also use the demo data that we provide, which is based upon data from the Canadian Institute of Cybersecurity.  If you are using the demo data simply skip this step and continue. 
+If you would like to use this demo data, please *skip this step* and continue.
 
-Snowflake will require you to grant permission to run this app.  For a smooth experience make sure you do this in the initial setup.
+Again, make sure you have granted permissions to run Tempo.
 
-Once the app is running you will be brought to the management interface. This while be importat if you get into advanced opperations. For now we need to build a worksheet.
+Once Tempo is running a management interface launches which will be helpful in the future in monitoring Tempo.  Before using the management interface, we just need to tell Tempo what to by entering commands in a worksheet. 
 
 Go to the `Projects>Worksheets` console in Snowflake. Here you should see a `+` sign in the top right corner of the screen.  We will use this to create our own worksheets. Go ahead and click it now. 
 
@@ -43,8 +45,7 @@ In the new worksheet we now need to setup our procedures. We will start with ini
 CALL management.create_resources();
 ```
 #### Purpose: 
-Initializes the application by loading required model weights and configurations
-Required Permissions: Warehouse, compute pool, and task management access
+Initializes the application by loading required model weights and configuration using the granted permissions for warehouse and compute pool creation and task management
 
 #### Note:
 It is recommended that you run this command before running the sheet as a whole.  It can take some time for the resources to spin up.  If you are the account admin you can monitor resources using `SHOW COMPUTE POOLS IN ACCOUNT;`. Once the compute pools are idle you may continue with the rest of the worksheet.
@@ -63,6 +64,9 @@ Executes inference on specified service data
 If you want to use the demo feel free to name it something like `demorun` for the `your_service_name`.
 
 ## 5. Deep Dive Analysis
+
+One unique capability of Tempo is that potential incidents are tied back to underlying data sequences.  Every sequence used by Tempo is assigned a unique ID and is available for additional analysis.  You can see this Sequence ID with every anomaly identified.
+
 ```sql
 CALL inspect.deepdive(sequence_id);
 ```

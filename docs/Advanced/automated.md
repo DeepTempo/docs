@@ -12,7 +12,7 @@ CALL automated_detection.start_automated_inference(
 ```
 **Parameters:**
 - `source_table_name`: Fully qualified name of the source table (string).  This should be the same name as the table you will want to run against.  If you selected your own data in the setup phase you will need to pass in the full table name in the format `database.schema.tablename`.  To do this easlily highlight `source_table_name` and doubleclick the table you want to add in the Snowflake pannel on the left. 
-- `slot_number`: Reference slot number (integer). This is how we map the data to the job. We assign data to each slot and then reference the slot in each job.
+- `slot_number`: Reference slot number (integer). This is how we map the data to the job. We assign data to each slot and then reference the slot in each job. This number needs to be unique to the stream.  Once it is set we don't need to reference it again. 
 - `refresh_time`: Task Execution Schedule (Cron Format). This defines the schedule for task execution using cron format. It consists of five fields specifying: 
 
     ```
@@ -31,9 +31,8 @@ CALL automated_detection.start_automated_inference(
     - `*/15 9-17 * * MON-FRI`: Every 15 minutes, 9 AM–5 PM, Monday to Friday.  
     - `30 23 L * *`: Runs at 11:30 PM on the last day of the month.  
 
-Use this to automate periodic tasks efficiently.
 Notes:
-- If you do static inference the job will run when you deploy.  If you use automatic inference it will be Scheduled for 8:00am UTC daily
+- If you do static inference the job will run when you deploy.  If you use automatic inference it will be Scheduled based on the `refresh_time`
 - When you add a table to a slot our app will create a stream to corresponding to the slot number. Stream names are automatically generated based on slot numbers:
   - Slot 1: `stream_one_interactions`
   - Slot 2: `stream_two_interactions`
