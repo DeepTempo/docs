@@ -142,8 +142,8 @@ const config = {
             title: 'Company',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Docs Improvements',
+                href: 'https://github.com/DeepTempo/docs',
               },
               {
                 label: 'DeepTempo',
