@@ -1,5 +1,69 @@
 # Fine-tune Model
 
+#### When to Consider Fine-Tuning
+
+Our baseline model provides robust performance across many use cases. However, fine-tuning can be beneficial in specific scenarios:
+
+#### Performance Evaluation Workflow
+
+1. Initial Assessment
+
+   - Start by testing the baseline model on a representative subset of your data using the [Evaluation function](#performance-evaluation)
+
+   - Collect performance metrics:
+
+     - Accuracy rate
+
+     - False Negative and Positive rate (F1 Score)
+
+     - Recall
+
+2. Decision Criteria for Fine-Tuning
+
+   - Consider fine-tuning if:
+
+     - Baseline model accuracy falls below 85-90%
+
+     - Low F1 Score
+
+     - Critical domain-specific patterns are consistently missed
+
+### Computational Considerations
+
+#### Fine-Tuning Resource Requirements
+
+- Estimated Compute Time and Expense:
+
+  | **Dataset Size**      | **Estimated Time (hours)** | **Compute Cost (Credits)** |
+  |-----------------------|---------------------------|----------------------------|
+  | Small (1-100k samples)  | ~ 0.01 - 0.05          |      ~0.0095               |
+  | Medium (100k-1M samples)| ~ 0.05 - 0.1           | ~0.05              |
+  | Large (1M+ samples)  |  > 0.1                    | > 0.1                |
+ 
+- Resources in use: 
+
+  - Compute Pool: GPU_NV_S (0.57 CpH)
+
+  - Warehouse size : Medium (4 CpH)
+
+> **Note:** *[CpH](https://www.snowflake.com/legal-files/CreditConsumptionTable.pdf) refers to credits per hour* 
+
+### Performance Evaluation
+
+You can evaluate model performance using the `CALL STATIC_DETECTION.evaluation();` function after assigning a table with labeled data to the evaluation reference in the reference table.
+
+1. Assign a labeled data table to the evaluation reference within the reference table.  
+
+
+2. Run the `STATIC_DETECTION.evaluation()` procedure to generate performance metrics based on the assigned data.
+
+```sql
+CALL STATIC_DETECTION.evaluation();
+```
+
+
+# Fine-tuning the Model
+
 If you want to increase the accuracy by tuning the model to your own network you can use the following commands.
 
 ```sql
