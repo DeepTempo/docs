@@ -14,7 +14,7 @@ To run inference on your dataset, please ensure the following features are liste
 | **bwd_bytes**      | Total number of payload bytes, sent from destination to source                                                 |
 | **total_fwd_pkts** | Total number of packets sent from source to destination                                                        |
 | **total_bwd_pkts** | Total number of packets sent from destination to source                                                        |
-| **label**          | Required if fine-tuning. Indicates if flow is suspicious marked as 'MALICIOUS' or if normal marked as 'BENIGN' |
+| **label**          | Required if fine-tuning. Indicates if flow is suspicious marked as 1 or if normal marked as 0                  |
 
 The above features can be exported from network monitoring tools such as NetFlow, Wireshark, Zeek, SolarWinds or AWS/GCP Flow logs
 
