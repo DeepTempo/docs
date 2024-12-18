@@ -19,7 +19,7 @@ To run inference on your dataset, please ensure the following features are liste
 The above features can be exported from network monitoring tools such as NetFlow, Wireshark, Zeek, SolarWinds or AWS/GCP Flow logs
 
 #### sample input data
-![sample input data](./assets/input_data_sample.png)
+![sample input data](./assets/new_sample_data.png)
 
 
 ## Adding a uid-device mapping
