@@ -61,7 +61,7 @@ CALL model_optimization.tune_model('service_name');
 **Parameters:**
 - `service_name`: Name of the service for model tuning (string)
 
-Purpose: Updates model based on tuning log data from the reference page
+Purpose: Updates model based on tuning log data from the reference page as shown in the screenshot
 ![reference page](../assets/reference_page.png)
 
 ### Model Rollback
