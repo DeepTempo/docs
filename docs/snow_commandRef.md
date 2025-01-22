@@ -13,11 +13,12 @@ Required Permissions: Warehouse, compute pool, and task management access
 
 ### Run Inference
 ```sql
-CALL static_detection.inference('your_service_name');
+CALL static_detection.inference(include_mitre_map);
 ```
-Parameters:
-- `your_service_name`: Name of the service to analyze (string)
-Purpose: Executes inference on specified service data
+Parameters: 
+- `include_mitre_map (BOOLEAN)`: Specifies whether to include MITRE technique mappings in the classified anomalies. Set to TRUE to include the mappings, or FALSE to exclude them.
+
+Purpose: This parameter acts as a toggle to determine whether MITRE technique mappings are added to the identified anomalies during the inference process.
 
 ### Deep Dive Analysis
 ```sql
@@ -26,6 +27,18 @@ CALL inspect.deepdive(sequence_id);
 Parameters:
 - `sequence_id`: Identifier of the sequence to analyze (string/integer)
 Purpose: Investigates specific sequences flagged as anomalies
+
+
+### Mitre ATT&CK Classification
+```sql
+CALL inspect.mitre_classification();
+```
+
+Parameters:
+- `None`
+
+Purpose: Classifies MITRE techniques  for a table of known anomalies sourced from the Tempo app or other systems
+
 
 ## Automated Detection
 
