@@ -18,7 +18,7 @@ CALL static_detection.inference(include_mitre_map);
 Parameters: 
 - `include_mitre_map (BOOLEAN)`: Specifies whether to include MITRE technique mappings in the classified anomalies. Set to TRUE to include the mappings, or FALSE to exclude them.
 
-Purpose: This parameter acts as a toggle to determine whether MITRE technique mappings are added to the identified anomalies during the inference process.
+Purpose: This parameter acts as a toggle to determine whether MITRE tactic mappings are added to the identified anomalies during the inference process.
 
 ### Deep Dive Analysis
 ```sql
@@ -37,7 +37,7 @@ CALL inspect.mitre_classification();
 Parameters:
 - `None`
 
-Purpose: Classifies MITRE techniques  for a table of known anomalies sourced from the Tempo app or other systems
+Purpose: Classifies MITRE tactics for a table of known anomalies sourced from the Tempo app or other systems
 
 
 ## Automated Detection
