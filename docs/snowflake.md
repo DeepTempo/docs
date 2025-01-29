@@ -54,14 +54,13 @@ It is recommended that you run this command before running the sheet as a whole.
 
 ### Run Static Inference
 ```sql
-CALL static_detection.inference('your_service_name');
+CALL static_detection.inference(True);
 ```
-**Parameters:**
-- `your_service_name`: Name of the service to analyze (string).  This is set by you and should be unique to each run.
-#### Purpose: 
-Executes inference on specified service data
 
-If you want to use the demo feel free to name it something like `demorun` for the `your_service_name`.
+**Parameters:**
+- `True/False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
+#### Purpose: 
+This parameter acts as a toggle to determine whether MITRE tactic mappings are added to the identified anomalies during the inference process or if the anomaly dietection job is the only thing that runs. 
 
 ## 5. Deep Dive Analysis
 
@@ -76,6 +75,8 @@ CALL inspect.deepdive(sequence_id);
 Investigate specific sequences flagged as anomalies
 
 Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
+
+If you ran the inference with MITRE tactic mappings turned on you can dive even deeper using the [MITRE ATT&CK Classification doc here](/docs/miterclass.md)
 
 ## Notes
 - All commands require appropriate permissions for warehouse, compute pool, and task management

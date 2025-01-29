@@ -57,3 +57,5 @@ yarn.lock
 # Optional: exclude versioned docs
 /versioned_docs
 /versioned_sidebars
+
+.codegpt
