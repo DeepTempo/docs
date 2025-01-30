@@ -27,6 +27,12 @@ Parameters:
 - `sequence_id`: Identifier of the sequence to analyze (string/integer)
 Purpose: Investigates specific sequences flagged as anomalies
 
+### MITRE ATT&CK Technique Classification
+```sql
+CALL inspect.mitre_classification();
+```
+Purpose: Classifies known anomlies to the corresponding MITRE ATT&CK technique
+
 ## Automated Detection
 
 ### Start Automated Inference
