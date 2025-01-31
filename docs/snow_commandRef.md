@@ -17,6 +17,7 @@ CALL static_detection.inference('your_service_name');
 ```
 Parameters:
 - `your_service_name`: Name of the service to analyze (string)
+
 Purpose: Executes inference on specified service data
 
 ### Deep Dive Analysis
@@ -25,6 +26,7 @@ CALL inspect.deepdive(sequence_id);
 ```
 Parameters:
 - `sequence_id`: Identifier of the sequence to analyze (string/integer)
+  
 Purpose: Investigates specific sequences flagged as anomalies
 
 ### MITRE ATT&CK Technique Classification
