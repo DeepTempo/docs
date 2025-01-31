@@ -13,11 +13,10 @@ Required Permissions: Warehouse, compute pool, and task management access
 
 ### Run Inference
 ```sql
-CALL static_detection.inference('your_service_name');
+CALL static_detection.inference(True);
 ```
 Parameters:
-- `your_service_name`: Name of the service to analyze (string)
-
+- `True/False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
 Purpose: Executes inference on specified service data
 
 ### Deep Dive Analysis
@@ -82,7 +81,7 @@ CALL automated_detection.alter_automated_inference('stream_one_interactions', 's
 ### Model Evaluation
 
 ```sql
-CALL static_detection.evaluation();
+CALL model_optimization.evaluation();
 ```
 Purpose: Evaluates the model's effectiveness using labeled user data to determine if the base model is suitable for the given use case.
 
