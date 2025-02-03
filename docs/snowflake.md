@@ -17,12 +17,18 @@ If you would rather use the Snowflake solution guide you can find it at [this li
 ### Find The App
 In the Snowflake app Marketplace you can find the Tempo app or simply click [Here](https://app.snowflake.com/marketplace/listing/GZTYZOYXHP3/deeptempo-cybersecurity-tempo).  
 
-Improtantly - if you would like to run Tempo on your own data please select the correct storage before clicking the launch app button in the deployment phase.
-To select your table please click `add` next to the `on Incident Inference Logs` section. In the popup after clicking the `add` button click the `+Select Data` button and find the table you want to use on the dropdown.  Select it and click `Save`.
+### Selecting Storage for Tempo Deployment  
 
-![reference page](assets/reference_page.png)
+If you want to run Tempo on your own data, follow these steps to select the correct storage before launching the app:  
 
-If you would like to use this demo data, please *skip this step* and continue.
+![reference page](./assets/reference_navi.gif)
+
+If you would like to use this demo data, please *skip this step* and continue: 
+
+1. Click the **Add** button next to the **on Incident Inference Logs** section.  
+2. In the popup window, click **+Select Data**.  
+3. From the dropdown menu, find and select the appropriate table.  
+4. Click **Save** to confirm your selection.  
 
 Again, make sure you have granted permissions to run Tempo.
 
@@ -34,7 +40,7 @@ Go to the `Projects>Worksheets` console in Snowflake. Here you should see a `+` 
 
 From the top of the worksheet there should be a dropdown called `Select Databases`.  This is what you will use to attach our database to this worksheet.  If you are using demo data select the option with TEMPO at the beginning of it's name.
 
-![database_selection](assets/database_selection.png)
+![database_selection](assets/database_selection.gif)
 
 ## 3. Resource Management
 
@@ -54,14 +60,13 @@ It is recommended that you run this command before running the sheet as a whole.
 
 ### Run Static Inference
 ```sql
-CALL static_detection.inference('your_service_name');
+CALL static_detection.inference(True);
 ```
-**Parameters:**
-- `your_service_name`: Name of the service to analyze (string).  This is set by you and should be unique to each run.
-#### Purpose: 
-Executes inference on specified service data
 
-If you want to use the demo feel free to name it something like `demorun` for the `your_service_name`.
+**Parameters:**
+- `True/False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
+#### Purpose: 
+This parameter toggles whether MITRE strategy mappings are added to the identified anomalies during the inference phase or if only the anomaly detection task runs. 
 
 ## 5. Deep Dive Analysis
 
@@ -73,9 +78,11 @@ CALL inspect.deepdive(sequence_id);
 **Parameters:**
 - `sequence_id`: Identifier of the sequence to analyze (integer). This ID can be used down the road if any anomalies are detected to run deeper investigation on suspicious interactions. 
 #### Purpose: 
-Investigate specific sequences flagged as anomalies
+This procedure returns the raw data points used in the composition of a given sequence.
 
 Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
+
+If you ran the inference with MITRE tactic mappings turned on you can dive even deeper using the [MITRE ATT&CK Classification doc here](/docs/miterclass.md)
 
 ## Notes
 - All commands require appropriate permissions for warehouse, compute pool, and task management
