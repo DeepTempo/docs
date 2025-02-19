@@ -12,8 +12,8 @@ This section guides you through setting up Splunk Enterprise to analyze the outp
 
 1. Clone the installation repository:
    ```bash
-   git clone https://github.com/your-username/splunk-tempo-dashboard-installer.git
-   cd splunk-tempo-dashboard-installer
+   git clone git clone https://github.com/DeepTempo/SplunkDashboards.git
+   cd SplunkDashboards
    ```
 
 2. Place the Splunk Enterprise tarball in the same directory as the script.
