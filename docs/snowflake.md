@@ -48,7 +48,7 @@ In the new worksheet we now need to setup our procedures. We will start with ini
 
 ### Initialize Application Resources
 ```sql
-CALL management.create_resources();
+CALL INFRA_CONTROLS.CREATE_RESOURCES();
 ```
 #### Purpose: 
 Initializes the application by loading required model weights and configuration using the granted permissions for warehouse and compute pool creation and task management
@@ -60,7 +60,7 @@ It is recommended that you run this command before running the sheet as a whole.
 
 ### Run Static Inference
 ```sql
-CALL static_detection.inference(True);
+CALL STATIC_DETECTION.ANOMALY_DETECTION(with_mitre:boolean);
 ```
 
 **Parameters:**
@@ -73,7 +73,7 @@ This parameter toggles whether MITRE strategy mappings are added to the identifi
 One unique capability of Tempo is that potential incidents are tied back to underlying data sequences.  Every sequence used by Tempo is assigned a unique ID and is available for additional analysis.  You can see this Sequence ID with every anomaly identified.
 
 ```sql
-CALL inspect.deepdive(sequence_id);
+CALL INSPECT.INVESTIGATE_SEQUENCE(sequence_id:int);
 ```
 **Parameters:**
 - `sequence_id`: Identifier of the sequence to analyze (integer). This ID can be used down the road if any anomalies are detected to run deeper investigation on suspicious interactions. 
