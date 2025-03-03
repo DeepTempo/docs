@@ -28,7 +28,7 @@ Note: If no reference is specified, the application will default to its demo dat
 To classify detected anomalies using MITRE ATT&CK mappings, execute the following SQL command in your worksheet:  
 
 ```sql
-CALL INSPECT.mitre_classification();
+CALL THREAT_INTELLIGENCE.MITRE_TACTIC_CLASSIFICATION();
 ```
 
 ### Purpose  
