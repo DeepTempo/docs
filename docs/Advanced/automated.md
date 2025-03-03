@@ -1,8 +1,7 @@
 # Automated Detection
 
 ## Important Notice ⚠️
-This section has been withdrawn from version 2.0.3 for further tuning. Please refer to the updated documentation for the latest information and guidelines regarding automated detection.
-
+This section has been withdrawn from version 2.0.3 for further tuning.
 
 Instead of running manually you can configure Tempo to run on a schedule using the following commands. 
 
