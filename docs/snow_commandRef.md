@@ -21,10 +21,10 @@ Purpose: Executes inference on specified service data
 
 ### Deep Dive Analysis
 ```sql
-CALL INSPECT.INVESTIGATE_SEQUENCE(sequence_id:int);
+CALL INSPECT.INVESTIGATE_SEQUENCE(sequence_id:varchar);
 ```
 Parameters:
-- `sequence_id`: Identifier of the sequence to analyze (integer)
+- `sequence_id`: Identifier of the sequence to analyze (varchar)
   
 Purpose: Investigates specific sequences flagged as anomalies
 

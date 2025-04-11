@@ -55,9 +55,9 @@ ForensicChat provides several filtering options that can be enabled or disabled 
 
 ![ForensicChat Usage Toggles](./assets/chatWindow.png)
 
-1. **Ignore Unclassified MITRE Tactics**: Filter out events that couldn't be mapped to MITRE tactics.
-2. **Ignore Unclassified Events**: Filter out events that couldn't be classified.
-3. **Ignore Benign Flows**: Filter out network flows classified as normal.
+1. **Ignore Unclassified MITRE Tactics**: Filter out events that were not mapped to MITRE tactics.
+2. **Ignore Unclassified Events**: Filter out events that were not be classified as anomalour or benign.
+3. **Ignore Benign Flows**: Filter out network flows classified as benign.
 4. **Ignore Anomalous Flows**: Filter out flows classified as anomalous (useful when focusing on specific known patterns).
 
 ## 5. Creating New Queries
@@ -73,6 +73,6 @@ To create a new analysis query:
 ## Notes
 - ForensicChat works best when MITRE classification has been run on your data (using `CALL THREAT_INTELLIGENCE.MITRE_TACTIC_CLASSIFICATION()` as outlined in the [MITRE Classification Guide](./mitreclass.md)).
 - The effectiveness of analysis depends on the quality and quantity of data available to the system.
-- For detailed investigation of specific anomalies, use the sequence ID with `CALL INSPECT.INVESTIGATE_SEQUENCE(sequence_id:int)` as outlined in the Deep Dive Analysis section of the [Snowflake Quickstart Guide](./snowflake.md).
+- For detailed investigation of specific anomalies, use the sequence ID with `CALL INSPECT.INVESTIGATE_SEQUENCE(sequence_id:varchar)` as outlined in the Deep Dive Analysis section of the [Snowflake Quickstart Guide](./snowflake.md).
 - For a complete list of available commands, refer to the [Snowflake Command Reference](./snow_commandRef.md).
 - If using your own data, ensure it includes the required features as specified in the [SF Features Guide](./SF_features.md).
