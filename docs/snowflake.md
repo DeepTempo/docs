@@ -82,7 +82,7 @@ This procedure returns the raw data points used in the composition of a given se
 
 Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
 
-If you ran the inference with MITRE tactic mappings turned on you can dive even deeper using the [MITRE ATT&CK Classification doc here](/docs/miterclass.md)
+If you ran the inference with MITRE tactic mappings turned on you can dive even deeper using the [MITRE ATT&CK Classification doc here](/docs/mitreclass.md)
 
 ## Notes
 - All commands require appropriate permissions for warehouse, compute pool, and task management

@@ -26,6 +26,7 @@ const sidebars = {
     'SF_features',
     'mitreclass',
     'snow_commandRef',
+    'forensichat',
 
     {
       type: 'category',
