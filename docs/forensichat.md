@@ -1,19 +1,19 @@
 # Forensichat Guide
 
 ## Overview
-ForensicChat is a cybersecurity analysis platform integrated within Tempo that helps security analysts investigate network traffic and identify potential threats. It leverages deep learning technology to analyze patterns and anomalies in network data, providing deeper insights than traditional rule-based systems.
+Forensichat is a cybersecurity analysis platform integrated within Tempo that helps security analysts investigate network traffic and identify potential threats. It leverages deep learning technology to analyze patterns and anomalies in network data, providing deeper insights than traditional rule-based systems.
 
-![ForensicChat Home Interface](./assets/forensichatHome.png)
+![Forensichat Home Interface](./assets/forensichatHome.png)
 
 ## Prerequisites
-Before using ForensicChat, ensure the Tempo app has been properly initialized and that you have granted the necessary permissions as outlined in the Snowflake Quickstart Guide. You will also need to run the inference as shown in the Quickstart Guide in order for there to be any data to analyze.
+Before using Forensichat, ensure the Tempo app has been properly initialized and that you have granted the necessary permissions as outlined in the Snowflake Quickstart Guide. You will also need to run the inference as shown in the Quickstart Guide in order for there to be any data to analyze.
 
-## 1. Accessing ForensicChat
+## 1. Accessing Forensichat
 
-To access and use ForensicChat, follow these steps:
+To access and use Forensichat, follow these steps:
 
 1. Navigate to the Tempo app in your Snowflake instance. Generally under data products > apps > Tempo.
-2. The ForensicChat interface will load, showing the available features and options.
+2. The Forensichat interface will load, showing the available features and options.
 
 ## 2. Using the Forensic Analysis Assistant
 
@@ -31,7 +31,7 @@ This feature enables security analysts to ask questions about network behavior a
 
 ## 3. Available Features
 
-ForensicChat includes several built-in capabilities:
+Forensichat includes several built-in capabilities:
 
 1. **MITRE ATT&CK Framework Analysis**: Categorize threats according to industry standards, mapping detected anomalies to known adversarial tactics and techniques.
 
@@ -51,9 +51,9 @@ ForensicChat includes several built-in capabilities:
 
 ## 4. Usage Toggles
 
-ForensicChat provides several filtering options that can be enabled or disabled according to your analysis needs:
+Forensichat provides several filtering options that can be enabled or disabled according to your analysis needs:
 
-![ForensicChat Usage Toggles](./assets/toggles.png)
+![Forensichat Usage Toggles](./assets/toggles.png)
 
 1. **Ignore Unclassified MITRE Tactics**: Filter out events that couldn't be mapped to MITRE tactics.
 2. **Ignore Unclassified Events**: Filter out events that couldn't be classified.
@@ -71,7 +71,7 @@ To create a new analysis query:
 ![Creating a New Query](./assets/ForensicQuery.png)
 
 ## Notes
-- ForensicChat works best when MITRE classification has been run on your data (using `CALL THREAT_INTELLIGENCE.MITRE_TACTIC_CLASSIFICATION()` as outlined in the [MITRE Classification Guide](./mitreclass.md)).
+- Forensichat works best when MITRE classification has been run on your data (using `CALL THREAT_INTELLIGENCE.MITRE_TACTIC_CLASSIFICATION()` as outlined in the [MITRE Classification Guide](./mitreclass.md)).
 - The effectiveness of analysis depends on the quality and quantity of data available to the system.
 - For detailed investigation of specific anomalies, use the sequence ID with `CALL INSPECT.INVESTIGATE_SEQUENCE(sequence_id:int)` as outlined in the Deep Dive Analysis section of the [Snowflake Quickstart Guide](./snowflake.md).
 - For a complete list of available commands, refer to the [Snowflake Command Reference](./snow_commandRef.md).
