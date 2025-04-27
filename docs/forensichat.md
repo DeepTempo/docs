@@ -1,4 +1,4 @@
-# ForensicChat Guide
+# Forensichat Guide
 
 ## Overview
 ForensicChat is a cybersecurity analysis platform integrated within Tempo that helps security analysts investigate network traffic and identify potential threats. It leverages deep learning technology to analyze patterns and anomalies in network data, providing deeper insights than traditional rule-based systems.
