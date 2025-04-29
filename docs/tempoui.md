@@ -64,7 +64,7 @@ To deploy Tempo in your own environment:
 
 2. **Deploy Using Script**:
    ```bash
-   ./deploy.sh <github_pat>
+   ./deploy.sh <deeptempo_license>
    ```
 
 3. **Exposing the Service**:
