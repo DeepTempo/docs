@@ -234,8 +234,6 @@ CALL INSPECT.INVESTIGATE_SEQUENCE('sequence_id');
 
 **Purpose**: This procedure returns the raw data points used in the composition of a given sequence.
 
-**Note**: If running on demo data, use 2 as the ID (valid IDs 1-1200)
-
 If you ran the inference with MITRE tactic mappings turned on, you can dive even deeper using the MITRE ATT&CK Classification documentation.
 
 ## System Configuration UI only
