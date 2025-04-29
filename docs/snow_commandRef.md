@@ -19,6 +19,14 @@ Parameters:
 - `True or False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
 Purpose: Executes inference on specified service data
 
+#### Viewing Classification Results
+
+After running the classification procedure, you can view the results by querying the output table:
+
+```sql
+SELECT * FROM STATIC_DETECTION.ANOMALOUS_EVENTS
+```
+
 ### Deep Dive Analysis
 ```sql
 CALL INSPECT.INVESTIGATE_SEQUENCE(varchar);
@@ -33,6 +41,14 @@ Purpose: Investigates specific sequences flagged as anomalies
 CALL THREAT_INTELLIGENCE.MITRE_TACTIC_CLASSIFICATION();
 ```
 Purpose: Classifies known anomlies to the corresponding MITRE ATT&CK technique
+
+#### Viewing Classification Results
+
+After running the classification procedure, you can view the results by querying the output table:
+
+```sql
+SELECT * FROM TEMPO.THREAT_INTELLIGENCE.MITRE_TACTICS_MAPPINGS
+```
 
 ## Model Optimization
 
