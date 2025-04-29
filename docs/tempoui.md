@@ -48,8 +48,6 @@ Once Tempo is running, a management interface launches which will help you monit
 
 ### On-Premises Deployment Instructions
 
-To deploy Tempo in your own environment:
-
 1. **Prepare Environment**:
    - For testing, you can use Minikube with GPU support:
      ```bash
@@ -206,7 +204,7 @@ Forensichat is Tempo's AI-powered analysis assistant that enables natural langua
 #### Creating New Queries
 1. Click the **New Query** button
 2. Enter your question in natural language, such as:
-   - Show me the top 20 similar events to sequence id 002dfbd6-df9a-4eed-a41f-4d707a54c183
+   `Show me the top 20 similar events to sequence id 002dfbd6-df9a-4eed-a41f-4d707a54c183`
 3. Click **Analyze Query** to process your request
 
 #### Viewing Query Results
