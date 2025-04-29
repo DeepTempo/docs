@@ -13,15 +13,15 @@ Required Permissions: Warehouse, compute pool, and task management access
 
 ### Run Inference
 ```sql
-CALL STATIC_DETECTION.ANOMALY_DETECTION(with_mitre:boolean);
+CALL STATIC_DETECTION.ANOMALY_DETECTION(boolean);
 ```
 Parameters:
-- `True/False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
+- `True or False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
 Purpose: Executes inference on specified service data
 
 ### Deep Dive Analysis
 ```sql
-CALL INSPECT.INVESTIGATE_SEQUENCE(sequence_id:varchar);
+CALL INSPECT.INVESTIGATE_SEQUENCE(varchar);
 ```
 Parameters:
 - `sequence_id`: Identifier of the sequence to analyze (varchar)
@@ -52,7 +52,7 @@ Purpose: Updates model based on tuning log data from the reference page
 
 ### Model Rollback
 ```sql
-CALL INFRA_CONTROLS.MODEL_ROLLBACK(version:int);
+CALL INFRA_CONTROLS.MODEL_ROLLBACK(int);
 ```
 Parameters: 
 - `version`: The integer version number of the model to be rolled back.
