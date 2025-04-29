@@ -65,7 +65,7 @@ CALL MODEL_OPTIMIZATION.EVALUATE_PERFORMANCE();
 If you want to increase the accuracy by tuning the model to your own network you can use the following commands.
 
 ```sql
-CALL model_optimization.tune_model();
+CALL MODEL_OPTIMIZATION.TUNE_MODEL();
 ```
 
 Purpose: Updates model based on tuning log data from the reference page as shown in the screenshot
@@ -74,7 +74,7 @@ Purpose: Updates model based on tuning log data from the reference page as shown
 
 ### Model Rollback
 ```sql
-CALL INFRA_CONTROLS.MODEL_ROLLBACK(version:int);
+CALL INFRA_CONTROLS.MODEL_ROLLBACK(int);
 ```
 Removes the specified version of the model and its metadata from the app.
 

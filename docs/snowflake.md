@@ -60,11 +60,11 @@ It is recommended that you run this command before running the sheet as a whole.
 
 ### Run Static Inference
 ```sql
-CALL STATIC_DETECTION.ANOMALY_DETECTION(with_mitre:boolean);
+CALL STATIC_DETECTION.ANOMALY_DETECTION(boolean);
 ```
 
 **Parameters:**
-- `True/False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
+- `True or False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
 #### Purpose: 
 This parameter toggles whether MITRE strategy mappings are added to the identified anomalies during the inference phase or if only the anomaly detection task runs. 
 
@@ -73,14 +73,12 @@ This parameter toggles whether MITRE strategy mappings are added to the identifi
 One unique capability of Tempo is that potential incidents are tied back to underlying data sequences.  Every sequence used by Tempo is assigned a unique ID and is available for additional analysis.  You can see this Sequence ID with every anomaly identified.
 
 ```sql
-CALL INSPECT.INVESTIGATE_SEQUENCE(sequence_id:varchar);
+CALL INSPECT.INVESTIGATE_SEQUENCE(varchar);
 ```
 **Parameters:**
 - `sequence_id`: Identifier of the sequence to analyze (varchar). This ID can be used down the road if any anomalies are detected to run deeper investigation on suspicious interactions. 
 #### Purpose: 
 This procedure returns the raw data points used in the composition of a given sequence.
-
-Note: If running on demo data let's use 2 as the id (valid IDs 1-1200)
 
 If you ran the inference with MITRE tactic mappings turned on you can dive even deeper using the [MITRE ATT&CK Classification doc here](/docs/mitreclass.md)
 
