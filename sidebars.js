@@ -15,6 +15,7 @@
 const sidebars = {
   tutorialSidebar: [
     'snowflake',
+    'tempoui',
     {
       type: 'category',
       label: 'Advanced',
