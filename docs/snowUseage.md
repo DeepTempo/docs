@@ -112,10 +112,3 @@ The following toggles allow users to control which types of events or flows are 
 | **Ignore Benign Network Flows** | Excludes network flows flagged as benign or normal, reducing noise in the data and helping to isolate potentially suspicious traffic. |
 | **Ignore Anomalous Flows** | Removes network flows labeled as anomalous. This can be useful when users want to focus only on confirmed patterns or known behavior baselines. |
 | **Ignore Unclassified Events** | Filters out events that were not categorized during the detection pipeline, simplifying the visual workspace. |
-
-## Notes
-- Forensichat works best when MITRE classification has been run on your data (using `CALL THREAT_INTELLIGENCE.MITRE_TACTIC_CLASSIFICATION()` as outlined in the [MITRE Classification Guide](./mitreclass.md)).
-- The effectiveness of analysis depends on the quality and quantity of data available to the system.
-- For detailed investigation of specific anomalies, use the sequence ID with `CALL INSPECT.INVESTIGATE_SEQUENCE('sequence_id')` as outlined in the Deep Dive Analysis section of the [Snowflake Quickstart Guide](./snowflake.md).
-- For a complete list of available commands, refer to the [Snowflake Command Reference](./snow_commandRef.md).
-- If using your own data, ensure it includes the required features as specified in the [SF Features Guide](./SF_features.md).
