@@ -82,7 +82,7 @@ const config = {
         items: [
           {
             to: '/docs/snowUI',
-            label: 'Snowflake Quickstart',
+            label: 'Snowflake Setup',
             position: 'left',
           },
           {
@@ -99,8 +99,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Snowflake Quickstart',
-                to: '/docs/snowflake',
+                label: 'Snowflake Setup',
+                to: '/docs/snowUI',
               },
             ],
           },
