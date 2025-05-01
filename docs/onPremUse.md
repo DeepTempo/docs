@@ -8,12 +8,12 @@ Forensichat is a cybersecurity analysis platform integrated within Tempo that he
 ## Prerequisites
 You will also need to run the inference as shown here in order for there to be any data to analyze.
 
-## 1. Accessing Forensichat
+## 1. Accessing the UI
 
-To access and use Forensichat, follow these steps:
+To access and use Tempo, follow these steps:
 
 1. Navigate to the Tempo app URL. This would have been configured by you during install.
-2. The Forensichat interface will load, showing the available features and options.
+2. The Tempo interface will load, showing the available features and options.
 
 
 ## 2. Running inference:
