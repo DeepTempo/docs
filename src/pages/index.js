@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button--hero"
-            to="/docs/snowflake">
+            to="/docs/snowUI">
             Tempo Tutorial - 15min
           </Link>
         </div>
