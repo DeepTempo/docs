@@ -12,7 +12,8 @@ Our baseline model provides robust performance across many use cases. However, f
    - Start by testing the baseline model on a representative subset of your data using the [Evaluation function](#performance-evaluation)
    - Collect performance metrics:
      - Accuracy rate
-     - Cohen’s Kappa
+     - F1 Score
+     - Recall
 
 2. Decision Criteria for Fine-Tuning
    - Consider fine-tuning if:
@@ -50,22 +51,20 @@ You can evaluate model performance using the `CALL MODEL_OPTIMIZATION.EVALUATE_P
 CALL MODEL_OPTIMIZATION.EVALUATE_PERFORMANCE();
 ```
 
-### **Interpretation of Kappa Score:**
-| **Kappa Score (κ)** | **Level of Agreement** |
-|----------------------|------------------------|
-| < 0.0               | Poor (Worse than chance) |
-| 0.0 – 0.20          | Slight agreement        |
-| 0.21 – 0.40         | Fair agreement          |
-| 0.41 – 0.60         | Moderate agreement      |
-| 0.61 – 0.80         | Substantial agreement   |
-| 0.81 – 1.00         | Almost perfect agreement |
+You would obtain a table of performance metrics including F1 Score, Recall, and Accuracy:
+
+| Metric   | Value |
+|----------|-------|
+| Accuracy | 0.95  |
+| F1 Score | 0.92  |
+| Recall   | 0.90  |
 
 # Fine-tuning the Model
 
 If you want to increase the accuracy by tuning the model to your own network you can use the following commands.
 
 ```sql
-CALL model_optimization.tune_model();
+CALL MODEL_OPTIMIZATION.TUNE_MODEL();
 ```
 
 Purpose: Updates model based on tuning log data from the reference page as shown in the screenshot
@@ -74,7 +73,7 @@ Purpose: Updates model based on tuning log data from the reference page as shown
 
 ### Model Rollback
 ```sql
-CALL INFRA_CONTROLS.MODEL_ROLLBACK(version:int);
+CALL INFRA_CONTROLS.MODEL_ROLLBACK(int);
 ```
 Removes the specified version of the model and its metadata from the app.
 

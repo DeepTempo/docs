@@ -14,20 +14,37 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
-    'snowflake',
+  
     {
       type: 'category',
-      label: 'Advanced',
+      label: 'On-Premise',
       items: [
-        'Advanced/automated',
-        'Advanced/finetune',
+        'onPrem',
+        'onPremUse',
       ],
     },
-    'SF_features',
-    'mitreclass',
-    'snow_commandRef',
-    'forensichat',
 
+    {
+      type: 'category',
+      label: 'Snowflake',
+      items: [
+        'snowUI',
+        'snowUseage',
+        {
+          type: 'category',
+          label: 'Worksheets',
+          items: [
+            'snowCMD',
+            'SF_features',
+            'mitreclass',
+            'snow_commandRef',
+            'Advanced/automated',
+            'Advanced/finetune',
+          ],
+        },
+      ],
+    },
+    
     {
       type: 'category',
       label: 'Visualizations',

@@ -34,6 +34,14 @@ CALL THREAT_INTELLIGENCE.MITRE_TACTIC_CLASSIFICATION();
 ### Purpose  
 This procedure analyzes known anomalous logs and maps them to relevant MITRE ATT&CK tactics and techniques for deeper security insights.  
 
+### Viewing Classification Results
+
+After running the classification procedure, you can view the results by querying the output table:
+
+```sql
+SELECT * FROM TEMPO.THREAT_INTELLIGENCE.MITRE_TACTICS_MAPPINGS
+```
+
 ## Notes  
 - Ensure proper reference assigning for table access.  
 - Classification results will be available in your output table for further investigation.  
