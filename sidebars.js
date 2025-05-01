@@ -14,21 +14,21 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
-    'snowflake',
-    'tempoui',
+    'onPrem',
+    'snowUI',
     {
       type: 'category',
-      label: 'Advanced',
+      label: 'Snowflake Worksheets',
       items: [
+        'snowCMD',
+        'SF_features',
+        'mitreclass',
+        'snow_commandRef',
         'Advanced/automated',
         'Advanced/finetune',
       ],
     },
-    'SF_features',
-    'mitreclass',
-    'snow_commandRef',
-    'forensichat',
-
+    
     {
       type: 'category',
       label: 'Visualizations',
