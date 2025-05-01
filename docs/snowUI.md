@@ -1,4 +1,4 @@
-# Tempo Snowflake UI
+# Setup
 
 ## Overview
 Tempo is a modern solution that leverages deep learning for network threat detection. By moving beyond conventional rule-based approaches, Tempo offers a more sophisticated and adaptable way to identify and respond to security events. Tempo uses a Deep Learning model that analyzes network and flow logs to detect various attacks, mapping them to MITRE ATT&CK for integration with your SIEM, SOC, and Threat Response systems.

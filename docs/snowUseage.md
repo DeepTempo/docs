@@ -1,4 +1,4 @@
-# Forensichat Guide
+# Guide
 
 ## Overview
 Forensichat is a cybersecurity analysis platform integrated within Tempo that helps security analysts investigate network traffic and identify potential threats. It leverages deep learning technology to analyze patterns and anomalies in network data, providing deeper insights than traditional rule-based systems.
@@ -6,7 +6,7 @@ Forensichat is a cybersecurity analysis platform integrated within Tempo that he
 ![Forensichat Home Interface](./assets/forensichatHome.png)
 
 ## Prerequisites
-Before using Forensichat, ensure the Tempo app has been properly initialized and that you have granted the necessary permissions as outlined in the Snowflake Quickstart Guide. You will also need to run the inference as shown in the Quickstart Guide in order for there to be any data to analyze.
+If using Snowflake, ensure the Tempo app has been properly initialized and that you have granted the necessary permissions as outlined in the Snowflake Install Guide. You will also need to run the inference as shown in the Install Guide in order for there to be any data to analyze.
 
 ## 1. Accessing Forensichat
 
@@ -18,8 +18,6 @@ To access and use Forensichat, follow these steps:
 
 ## 2. Executing Procedures throught the UI:
 This interface enables users to run predefined Tempo procedures directly from the UI inplace of a Snowflake worksheet.
-
-This interface enables users to run predefined Tempo procedures directly from the UI in place of a Snowflake worksheet.
 
 
 > **⚠️ Note:**  

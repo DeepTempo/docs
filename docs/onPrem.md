@@ -1,4 +1,4 @@
-# Tempo On-Premises
+# Install
 
 ## Overview
 Tempo is a modern solution that leverages deep learning for network threat detection. By moving beyond conventional rule-based approaches, Tempo offers a more sophisticated and adaptable way to identify and respond to security events. Tempo is uniquely able to see attacks that others cannot, using a Deep Learning model that analyzes network and flow logs to detect various attacks, mapping them to MITRE ATT&CK for integration with your SIEM, SOC, and Threat Response systems.
@@ -37,7 +37,7 @@ To deploy Tempo on-premises, you'll need:
      kubectl port-forward service/tempo-nginx 32598:80 --address 0.0.0.0 &
      ```
 
-## Using Your Own Data (On-Premises)
+## Using Your Own Data
 
 1. Navigate to the **Data Sources** section from the left menu
 2. Select a data source or use demo data for quick analysis
@@ -66,11 +66,11 @@ Your dataset must include the following features for proper analysis:
 
 These features can be exported from network monitoring tools such as NetFlow, Wireshark, Zeek, SolarWinds, or AWS/GCP Flow logs.
 
-## System Configuration (UI only)
+## System Configuration
 
 Access the Settings section to configure Tempo according to your needs:
 
-### System Status (On Premise only)
+### System Status
 Monitor the operational status of various components:
 - Processing Module
 - Vector Database
