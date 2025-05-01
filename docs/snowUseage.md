@@ -6,14 +6,20 @@ Forensichat is a cybersecurity analysis platform integrated within Tempo that he
 ![Forensichat Home Interface](./assets/forensichatHome.png)
 
 ## Prerequisites
-If using Snowflake, ensure the Tempo app has been properly initialized and that you have granted the necessary permissions as outlined in the Snowflake Install Guide. You will also need to run the inference as shown in the Install Guide in order for there to be any data to analyze.
+If using Snowflake, ensure the Tempo app has been properly initialized and that you have granted the necessary permissions as outlined in the Snowflake Setup Guide. 
 
-## 1. Accessing Forensichat
+If you want to run Tempo on your own data, follow these steps to select the correct storage before launching the app:  
 
-To access and use Forensichat, follow these steps:
+![reference page](./assets/reference_navi.gif)
+
+If you would like to use this demo data, please *skip this step* and continue: 
+
+## 1. Accessing The UI
+
+To access and use Tempo, follow these steps:
 
 1. Navigate to the Tempo app in your Snowflake instance. Generally under data products > apps > Tempo.
-2. The Forensichat interface will load, showing the available features and options.
+2. The Tempo interface will load, showing the available features and options.
 
 
 ## 2. Executing Procedures throught the UI:
@@ -21,8 +27,8 @@ This interface enables users to run predefined Tempo procedures directly from th
 
 
 > **⚠️ Note:**  
-> - **Inference Procedures** (Incident Classification, Mitre Classification) will default to the demo data tables unless you explicitly configure which table to target under **Reference Pages**.  
-> - **Performance Evaluation** and **Model Fine-Tuning** **require** you to explicitly set the target evaluation or tuning table on the **[Reference page](snowflake.md###Selecting-Storage-for-Tempo-Deployment)** page—they have no demo defaults.  
+> - **Inference Procedures** (Incident Classification, Mitre Classification) will default to the demo data tables unless you explicitly configure which table to target under Reference Pages.  
+> - **Performance Evaluation** and **Model Fine-Tuning** **require** you to explicitly set the target evaluation or tuning table on the reference page—they have no demo defaults.  
 >
 > Ensure you have selected or created the correct source tables before executing these procedures, or the command will fail.  
 
