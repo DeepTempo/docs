@@ -22,7 +22,7 @@ To access and use Forensichat, follow these steps:
 - Once the data source is added run the inference step to proccess it. 
 
 
-![alt text](assets/ForensichatExecConsole.png)
+![alt text](assets/ForensichatExecConsole-onprem.png)
 
 
 **Monitor Status**  
@@ -83,7 +83,7 @@ To create a new analysis query:
 ## 6. Settings and Filters
 The Tempo application provides customizable filtering and display options to tailor forensic investigations to specific analytical needs.
 
-![App Settings](./assets/ForensicSettings.png)
+![App Settings](./assets/ForensicSettings-onprem.png)
 
 The following toggles allow users to control which types of events or flows are shown in the visualization and downstream analyses:
 
