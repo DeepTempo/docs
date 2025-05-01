@@ -99,17 +99,7 @@ Forensichat includes several built-in capabilities:
    
    ![Deep Dive Analysis](./assets/DeepDive.png)
 
-## 5. Creating New Queries
-
-To create a new analysis query:
-
-1. Click the **New Query** button in the Forensic Analysis Assistant interface.
-2. Enter your question in natural language (e.g., "What suspicious activities occurred between 192.168.1.10 and external IPs last week?").
-3. Click **Analyze Query** to process your request.
-
-![Creating a New Query](./assets/ForensicQuery.png)
-
-## 6. Settings and Filters
+## 5. Settings and Filters
 The Tempo application provides customizable filtering and display options to tailor forensic investigations to specific analytical needs.
 
 ![App Settings](./assets/ForensicSettings.png)
