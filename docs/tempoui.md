@@ -18,7 +18,7 @@ Tempo can be deployed in two ways:
 - Grant Tempo necessary permissions including creating warehouses and compute pools as shown in the following images
 - Configure proper database access as shown in the following images
 
-![Permissions Page](https://img.src="/api/placeholder/800/450" alt="Tempo permissions setup page")
+![Tempo permissions setup](assets/tempo_permissions.png)
 
 #### For On-Premises Deployment:
 - Docker installed and configured
@@ -35,7 +35,7 @@ In the Snowflake Marketplace, you can find the Tempo app or directly access it [
 
 If you want to run Tempo on your own data, follow these steps to select the correct storage before launching the app:
 
-![Reference Navigation](https://img.src="/api/placeholder/800/450" alt="Storage selection navigation animation")
+![Reference Navigation](assets/reference_page.png)
 
 If you would like to use demo data, you can skip this step.
 
@@ -77,7 +77,7 @@ Once Tempo is running, a management interface launches which will help you monit
 
 From the top of the worksheet, use the "Select Databases" dropdown to attach your database. If you are using demo data, select the option with TEMPO at the beginning of its name.
 
-![Database Selection](https://img.src="/api/placeholder/800/450" alt="Database selection dropdown animation")
+![Database Selection](assets/database_selection.gif)
 
 ### 2. Resource Management
 
