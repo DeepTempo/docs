@@ -3,7 +3,7 @@
 ## Overview
 Forensichat is a cybersecurity analysis platform integrated within Tempo that helps security analysts investigate network traffic and identify potential threats. It leverages deep learning technology to analyze patterns and anomalies in network data, providing deeper insights than traditional rule-based systems.
 
-![Forensichat Home Interface](./assets/forensichatHome.png)
+![Forensichat Home Interface](./assets/forensichatHome-onprem.png)
 
 ## Prerequisites
 You will also need to run the inference as shown here in order for there to be any data to analyze.
@@ -37,18 +37,17 @@ To access and use Forensichat, follow these steps:
 ## 3. Using the Forensic Analysis Assistant
 
 The Forensic Analysis Assistant allows you to perform natural language queries against your network data:
+This feature enables security analysts to ask questions about network behavior and potential security incidents in natural language, making advanced forensic analysis more accessible.
 
-![Forensic Analysis Assistant](./assets/ForensicQuery.png)
+![Forensic Analysis Assistant](./assets/ForensicQuery-onprem.png)
+
+To create a new analysis query:
+
+1. Click the **New Query** button in the Forensic Analysis Assistant interface.
+2. Enter your question in natural language (e.g., "What suspicious activities occurred between 192.168.1.10 and external IPs last week?").
+3. Click **Analyze Query** to process your request.
 
 `Sample Query: Show me top 10 similar events sequence id 982b5a35-d289-46f7-8adb-6aea0936b1c2`
-
-```
--- To use the Forensic Analysis Assistant, simply enter your query in the text field
--- No SQL command is needed as this is done through the UI
-```
-
-### Purpose
-This feature enables security analysts to ask questions about network behavior and potential security incidents in natural language, making advanced forensic analysis more accessible.
 
 ## 4. Available Features
 
@@ -64,23 +63,14 @@ Forensichat includes several built-in capabilities:
    - Potential Anomalies
    - MITRE ATT&CK Framework Distribution
    
-   ![Threat Overview](./assets/threatoverview.png)
+   ![Threat Overview](./assets/threatoverview-onprem.png)
 
 4. **Deep Investigation**: Perform detailed forensic analysis on specific connections that have been flagged as suspicious.
    
-   ![Deep Dive Analysis](./assets/DeepDive.png)
+   ![Deep Dive Analysis](./assets/DeepDive-onprem.png)
 
-## 5. Creating New Queries
 
-To create a new analysis query:
-
-1. Click the **New Query** button in the Forensic Analysis Assistant interface.
-2. Enter your question in natural language (e.g., "What suspicious activities occurred between 192.168.1.10 and external IPs last week?").
-3. Click **Analyze Query** to process your request.
-
-![Creating a New Query](./assets/ForensicQuery.png)
-
-## 6. Settings and Filters
+## 5. Settings and Filters
 The Tempo application provides customizable filtering and display options to tailor forensic investigations to specific analytical needs.
 
 ![App Settings](./assets/ForensicSettings-onprem.png)
