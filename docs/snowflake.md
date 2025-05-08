@@ -60,11 +60,9 @@ It is recommended that you run this command before running the sheet as a whole.
 
 ### Run Static Inference
 ```sql
-CALL STATIC_DETECTION.ANOMALY_DETECTION(boolean);
+CALL STATIC_DETECTION.ANOMALY_DETECTION();
 ```
 
-**Parameters:**
-- `True or False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
 #### Purpose: 
 This parameter toggles whether MITRE strategy mappings are added to the identified anomalies during the inference phase or if only the anomaly detection task runs. 
 

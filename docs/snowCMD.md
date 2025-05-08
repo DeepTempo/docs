@@ -26,11 +26,8 @@ CALL INFRA_CONTROLS.CREATE_RESOURCES();
 
 #### Run Static Inference
 ```sql
-CALL STATIC_DETECTION.ANOMALY_DETECTION(TRUE);
+CALL STATIC_DETECTION.ANOMALY_DETECTION();
 ```
-
-**Parameters**:
-- `True/False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or FALSE to exclude them.
 
 **Purpose**: This parameter toggles whether MITRE strategy mappings are added to the identified anomalies during the inference phase or if only the anomaly detection task runs.
 

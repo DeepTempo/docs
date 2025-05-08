@@ -29,7 +29,7 @@ const sidebars = {
       label: 'Snowflake',
       items: [
         'snowUI',
-        'snowUseage',
+        'snowUsage',
         {
           type: 'category',
           label: 'Worksheets',
