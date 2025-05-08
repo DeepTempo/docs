@@ -13,11 +13,9 @@ Required Permissions: Warehouse, compute pool, and task management access
 
 ### Run Inference
 ```sql
-CALL STATIC_DETECTION.ANOMALY_DETECTION(boolean);
+CALL STATIC_DETECTION.ANOMALY_DETECTION();
 ```
-Parameters:
-- `True or False`: Specifies whether to include optional MITRE tactic mappings in the classified anomalies. Set to TRUE to include the mappings, or False to exclude them.
-Purpose: Executes inference on specified service data
+Purpose: Executes anomaly detection on specified service data
 
 #### Viewing Classification Results
 
