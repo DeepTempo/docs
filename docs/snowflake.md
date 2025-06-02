@@ -48,8 +48,12 @@ In the new worksheet we now need to setup our procedures. We will start with ini
 
 ### Initialize Application Resources
 ```sql
-CALL INFRA_CONTROLS.CREATE_RESOURCES();
+CALL INFRA_CONTROLS.CREATE_RESOURCES('gpu_nv_m','medium');
 ```
+Parameters:
+- **Instance Family**: Defines the class of compute hardware to be provisioned
+- **Warehouse size**: Specifies the compute power level allocated to the virtual warehouse
+
 #### Purpose: 
 Initializes the application by loading required model weights and configuration using the granted permissions for warehouse and compute pool creation and task management
 
@@ -64,7 +68,7 @@ CALL STATIC_DETECTION.ANOMALY_DETECTION();
 ```
 
 #### Purpose: 
-This parameter toggles whether MITRE strategy mappings are added to the identified anomalies during the inference phase or if only the anomaly detection task runs. 
+Executes anomaly detection on specified service data
 
 ## 5. Deep Dive Analysis
 

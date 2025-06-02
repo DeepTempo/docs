@@ -32,7 +32,7 @@ Parameters:
 CALL STATIC_DETECTION.ANOMALY_DETECTION();
 ```
 
-**Purpose**: This parameter toggles whether MITRE strategy mappings are added to the identified anomalies during the inference phase or if only the anomaly detection task runs.
+**Purpose**: Executes anomaly detection on specified service data
 
 ## Using Your Own Data with Snowflake Worksheets
 
@@ -40,7 +40,7 @@ To run Tempo on your own data:
 
 ```sql
 -- Initialize Application Resources
-CALL INFRA_CONTROLS.CREATE_RESOURCES();
+CALL INFRA_CONTROLS.CREATE_RESOURCES('gpu_nv_m', 'medium');
 
 -- Run Static Inference
 CALL STATIC_DETECTION.ANOMALY_DETECTION();
