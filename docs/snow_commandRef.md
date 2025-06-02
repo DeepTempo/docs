@@ -4,8 +4,12 @@
 
 ### Initialize Application Resources
 ```sql
-CALL INFRA_CONTROLS.CREATE_RESOURCES();
+CALL INFRA_CONTROLS.CREATE_RESOURCES('gpu_nv_m','medium');
 ```
+Parameters: 
+- **Instance Family**: Defines the class of compute hardware to be provisioned
+- **Warehouse size**: Warehouse Size: Specifies the compute power level allocated to the virtual warehouse
+  
 Purpose: Initializes the application by loading required model weights and configurations
 Required Permissions: Warehouse, compute pool, and task management access
 

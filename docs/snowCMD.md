@@ -15,8 +15,11 @@ In a new Snowflake worksheet, you need to set up the necessary procedures. You c
 
 #### Initialize Application Resources
 ```sql
-CALL INFRA_CONTROLS.CREATE_RESOURCES();
+CALL INFRA_CONTROLS.CREATE_RESOURCES('gpu_nv_m', 'medium');
 ```
+Parameters:
+- **Instance Family**: Defines the class of compute hardware to be provisioned. Example: 'gpu_nv_m' refers to a family of GPU-accelerated instances powered by NVIDIA hardware, workloads. refer to the [Snowflake Instance Families Documentation](https://docs.snowflake.com/en/developer-guide/snowpark-container-services/working-with-compute-pool#creating-a-compute-pool).
+- **Warehouse size**: Warehouse Size: Specifies the compute power level allocated to the [virtual warehouse](https://docs.snowflake.com/en/sql-reference/sql/create-warehouse#optional-properties-objectproperties).
 
 **Purpose**: Initializes the application by loading required model weights and configuration using the granted permissions for warehouse and compute pool creation and task management.
 
@@ -39,8 +42,8 @@ To run Tempo on your own data:
 -- Initialize Application Resources
 CALL INFRA_CONTROLS.CREATE_RESOURCES();
 
--- Run Static Inference (set to True to include MITRE tactic mappings)
-CALL STATIC_DETECTION.ANOMALY_DETECTION(TRUE);
+-- Run Static Inference
+CALL STATIC_DETECTION.ANOMALY_DETECTION();
 ```
 
 ## Advanced Analysis Commands
