@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'http://docs.deeptempo.ai',
+  url: 'http://deeptempo.ai',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -78,6 +78,7 @@ const config = {
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
+          component: 'CustomLogo',
         },
         items: [
           {
@@ -152,7 +153,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2024 Deeptempo, Inc. Built with Docusaurus`,
+        copyright: `Copyright © 2025 Deeptempo, Inc.`,
       },
       prism: {
         theme: prismThemes.github,
