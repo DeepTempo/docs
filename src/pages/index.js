@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button--hero"
             to="/docs/snowUI">
-            Snowflake Tutorial - 15min
+            Tempo Tutorial - 15min
           </Link>
         </div>
       </div>
