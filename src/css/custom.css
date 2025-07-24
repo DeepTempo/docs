@@ -52,3 +52,36 @@
 .footer--dark {
   background-color: #0e0e0d;
 }
+
+/* Hide external link icon for Docs button */
+.navbar__link--no-external-icon::after {
+  display: none !important;
+}
+
+/* Alternative approach to hide external link icons */
+.navbar__item[href*="docs.deeptempo.ai"]::after {
+  display: none !important;
+}
+
+/* More specific selector for external links */
+.navbar__item[href^="http"]::after {
+  display: none !important;
+}
+
+/* Make the Docs button black like other internal links */
+.navbar__item[href="/"] {
+  color: #000000 !important;
+}
+
+.navbar__item[href="/"]:hover {
+  color: #cd2e16 !important;
+}
+
+/* Dark mode override for Docs button */
+[data-theme='dark'] .navbar__item[href="/"] {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .navbar__item[href="/"]:hover {
+  color: #cd2e16 !important;
+}

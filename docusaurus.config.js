@@ -46,21 +46,7 @@ const config = {
           // editUrl:
           //   'https://github.com/Skidaway-io/docs',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/Skidaway-io/docs',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -78,8 +64,14 @@ const config = {
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
+          href: 'https://deeptempo.ai',
         },
         items: [
+          {
+            to: '/',
+            label: 'Docs',
+            position: 'left',
+          },
           {
             to: '/docs/snowUI',
             label: 'Snowflake Setup',
@@ -133,7 +125,7 @@ const config = {
                 href: 'https://www.youtube.com/@DeepTempo-ai',
               },
               {
-                label: 'LinkeIn',
+                label: 'LinkedIn',
                 href: 'https://www.linkedin.com/company/deeptempo/',
               },
             ],
@@ -152,7 +144,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2024 Deeptempo, Inc. Built with Docusaurus`,
+        copyright: `Copyright © 2025 Deeptempo, Inc.`,
       },
       prism: {
         theme: prismThemes.github,
