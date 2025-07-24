@@ -3,7 +3,7 @@ import {useLocation} from '@docusaurus/router';
 
 export default function CustomLogo() {
   const location = useLocation();
-  const isHomePage = location.pathname === '/' || location.pathname === '/docs';
+  const isHomePage = location.pathname === '/' || location.pathname === '';
   
   const logoUrl = isHomePage ? 'https://deeptempo.ai' : '/';
   
