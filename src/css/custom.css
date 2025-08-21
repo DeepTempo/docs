@@ -82,6 +82,8 @@
   color: #ffffff !important;
 }
 
+
+
 [data-theme='dark'] .navbar__item[href="/"]:hover {
   color: #cd2e16 !important;
 }

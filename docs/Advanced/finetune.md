@@ -1,3 +1,11 @@
+---
+id: model-fine-tuning
+title: "Model Fine-Tuning - Customizing Tempo for Your Environment"
+description: "Advanced guide to fine-tuning Tempo's deep learning models for your specific environment. Improve detection accuracy with custom training."
+slug: /model-fine-tuning
+tags: [fine-tuning, models, customization, training, advanced]
+---
+
 # Fine-tune Model
 
 To access fine-tuning features, contact support@DeepTempo.ai for activation.

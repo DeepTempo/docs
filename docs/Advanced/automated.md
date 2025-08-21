@@ -1,3 +1,11 @@
+---
+id: automated-detection
+title: "Automated Detection - Scheduled Threat Detection with Tempo"
+description: "Learn how to configure automated threat detection schedules with Tempo. Set up continuous monitoring and automated inference workflows."
+slug: /automated-detection
+tags: [automated, detection, scheduling, monitoring, inference]
+---
+
 # Automated Detection
 
 ## Important Notice ⚠️

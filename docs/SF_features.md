@@ -1,3 +1,11 @@
+---
+id: data-requirements
+title: "Data Requirements - Using Your Own Data with Tempo"
+description: "Learn the required data features and formats for running Tempo inference on your own datasets. Includes feature specifications and data preparation guidelines."
+slug: /data-requirements
+tags: [data, requirements, features, inference, datasets]
+---
+
 # Use Your Own Data
 
 To run inference on your dataset, please ensure the following features are listed

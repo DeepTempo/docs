@@ -1,3 +1,11 @@
+---
+id: snowflake-usage
+title: "Snowflake Usage Guide - Forensichat Analysis Platform"
+description: "Complete guide to using Forensichat within Snowflake for cybersecurity analysis. Investigate network traffic and identify threats with deep learning."
+slug: /snowflake-usage
+tags: [snowflake, forensichat, analysis, cybersecurity, usage]
+---
+
 # Guide
 
 ## Overview

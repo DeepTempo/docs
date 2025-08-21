@@ -1,3 +1,11 @@
+---
+id: snowflake-quickstart
+title: "Snowflake Quickstart Guide - Tempo Deep Learning Integration"
+description: "Learn how to deploy and use Tempo's deep learning threat detection in Snowflake. Step-by-step guide with anomaly detection and MITRE ATT&CK mapping."
+slug: /snowflake-quickstart
+tags: [snowflake, quickstart, deep-learning, threat-detection]
+---
+
 # Snowflake Quickstart Guide
 
 ## Overview
