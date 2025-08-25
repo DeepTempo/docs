@@ -1,3 +1,11 @@
+---
+id: splunk-integration
+title: "Splunk Integration - Viewing Tempo Results in Splunk Enterprise"
+description: "Complete guide to integrating Tempo results with Splunk Enterprise. Set up visualizations, dashboards, and analysis tools for threat detection data."
+slug: /splunk-integration
+tags: [splunk, integration, visualization, dashboards, enterprise]
+---
+
 # Viewing Results in Splunk
 
 This section guides you through setting up Splunk Enterprise to analyze the output from the Snowflake TEMPO project.  This step is optional and intended for Splunk users who want a visualization of the output.  For this doc we used a trial account on Splunk and we import the results of Tempo as CSV.  In a production use case, you will likely use the Snowflake Splunk connector, DBConnect, as explained in the Snowflake documentation [here]: (https://community.snowflake.com/s/article/Integrating-Snowflake-and-Splunk-with-DBConnect)

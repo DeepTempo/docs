@@ -1,3 +1,11 @@
+---
+id: snowflake-setup
+title: "Snowflake Setup - Tempo Installation and Configuration"
+description: "Complete setup guide for Tempo in Snowflake marketplace. Configure permissions, deploy the app, and start threat detection with deep learning."
+slug: /snowflake-setup
+tags: [snowflake, setup, installation, configuration]
+---
+
 # Setup
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+id: mitre-attack-classification
+title: "MITRE ATT&CK Classification Guide - Threat Intelligence Mapping"
+description: "Learn how to map detected anomalies to MITRE ATT&CK tactics and techniques using Tempo's classification system in Snowflake."
+slug: /mitre-classification
+tags: [mitre-attack, classification, threat-intelligence, tactics]
+---
+
 # MITRE ATT&CK Classification Guide  
 
 ## Overview  

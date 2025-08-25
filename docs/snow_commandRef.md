@@ -1,3 +1,11 @@
+---
+id: snowflake-command-reference-quick
+title: "Snowflake Command Reference - Quick SQL Guide"
+description: "Quick reference guide for Tempo SQL commands in Snowflake. Resource management, detection procedures, and investigation commands."
+slug: /snowflake-command-reference
+tags: [snowflake, commands, sql, reference, quick-guide]
+---
+
 # Snowflake Tempo Command Reference
 
 ## Resource Management

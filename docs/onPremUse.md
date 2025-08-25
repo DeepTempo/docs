@@ -1,3 +1,11 @@
+---
+id: on-premises-usage
+title: "On-Premises Usage Guide - Forensichat Analysis Platform"
+description: "Learn how to use Forensichat cybersecurity analysis platform on-premises. Investigate network traffic, analyze threats, and leverage deep learning insights."
+slug: /on-premises-usage
+tags: [on-premises, forensichat, analysis, cybersecurity, usage]
+---
+
 # Guide
 
 ## Overview

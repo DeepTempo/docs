@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button--hero"
-            to="/docs/snowUI">
+            to="/docs/snowflake-setup">
             Tempo Tutorial - 15min
           </Link>
         </div>
@@ -32,11 +32,16 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="DeepTempo - Advanced Cybersecurity Threat Detection"
+      description="Advanced deep learning cybersecurity platform for network threat detection. Deploy Tempo on-premises or in Snowflake for AI-powered security analytics, MITRE ATT&CK mapping, and real-time anomaly detection.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <section className="padding-vert--lg">
+          <div className="container">
+            </div>
+            
+        </section>
       </main>
     </Layout>
   );

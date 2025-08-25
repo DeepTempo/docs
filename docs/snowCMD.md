@@ -1,3 +1,11 @@
+---
+id: snowflake-worksheets
+title: "Tempo Snowflake Worksheets - SQL Commands and Procedures"
+description: "Complete guide to using Tempo via Snowflake worksheets and SQL CLI. Learn database configuration, resource management, and threat detection commands."
+slug: /snowflake-worksheets
+tags: [snowflake, worksheets, sql, commands, cli]
+---
+
 # Tempo Snowflake Worksheets
 
 ## Overview

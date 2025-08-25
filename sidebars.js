@@ -14,42 +14,51 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
-  
+    {
+      type: 'doc',
+      id: 'snowflake-quickstart',
+      label: 'Quick Start',
+    },
     {
       type: 'category',
-      label: 'On-Premise',
+      label: 'Getting Started',
+      collapsed: false,
       items: [
-        'onPrem',
-        'onPremUse',
+        'snowflake-setup',
+        'data-requirements',
       ],
     },
-
     {
       type: 'category',
-      label: 'Snowflake',
+      label: 'On-Premises',
       items: [
-        'snowUI',
-        'snowUsage',
-        {
-          type: 'category',
-          label: 'Worksheets',
-          items: [
-            'snowCMD',
-            'SF_features',
-            'mitreclass',
-            'snow_commandRef',
-            'Advanced/automated',
-            'Advanced/finetune',
-          ],
-        },
+        'on-premises-installation',
+        'on-premises-usage',
       ],
     },
-    
     {
       type: 'category',
-      label: 'Visualizations',
+      label: 'Snowflake Platform',
       items: [
-        'Visualizations/Splunk',
+        'snowflake-usage',
+        'snowflake-worksheets',
+        'mitre-attack-classification',
+        'snowflake-command-reference-quick',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Advanced Features',
+      items: [
+        'Advanced/automated-detection',
+        'Advanced/model-fine-tuning',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Integrations',
+      items: [
+        'Visualizations/splunk-integration',
       ],
     }
   ],

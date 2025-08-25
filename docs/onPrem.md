@@ -1,3 +1,11 @@
+---
+id: on-premises-installation
+title: "On-Premises Installation Guide - Tempo Deep Learning Security"
+description: "Complete guide for deploying Tempo on-premises with Docker, Kubernetes, and GPU support. Includes prerequisites, deployment steps, and troubleshooting."
+slug: /on-premises-install
+tags: [installation, on-premises, docker, kubernetes, gpu]
+---
+
 # Install
 
 ## Overview

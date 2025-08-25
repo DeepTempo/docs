@@ -32,6 +32,13 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+    path: 'i18n',
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-US',
+        direction: 'ltr',
+      },
+    },
   },
 
   presets: [
@@ -50,15 +57,35 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
+
+  // Performance optimizations can be added when dependencies are installed
+
+  // Plugins will be added here when PWA dependencies are installed
+  plugins: [],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/DeepTempo-ai.png',
+      metadata: [
+        {name: 'keywords', content: 'deep learning, cybersecurity, threat detection, network security, AI, machine learning, MITRE ATT&CK, anomaly detection'},
+        {name: 'author', content: 'DeepTempo'},
+        {name: 'robots', content: 'index,follow'},
+        {property: 'og:type', content: 'website'},
+        {property: 'og:site_name', content: 'DeepTempo Documentation'},
+        {name: 'twitter:card', content: 'summary_large_image'},
+        {name: 'twitter:site', content: '@DeepTempo'},
+      ],
       navbar: {
         title: 'DeepTempo',
         logo: {
@@ -73,13 +100,13 @@ const config = {
             position: 'left',
           },
           {
-            to: '/docs/snowUI',
+            to: '/docs/snowflake-setup',
             label: 'Snowflake Setup',
             position: 'left',
           },
           {
-            href: 'https://app.snowflake.com/marketplace/listing/GZTYZOYXHP3/deeptempo-cybersecurity-tempo',
-            label: 'Snowflake',
+            to: 'https://app.snowflake.com/marketplace/listing/GZTYZOYXHP3/deeptempo-cybersecurity-tempo',
+            label: 'Launch Snowflake',
             position: 'right',
           },
         ],
@@ -92,7 +119,7 @@ const config = {
             items: [
               {
                 label: 'Snowflake Setup',
-                to: '/docs/snowUI',
+                to: '/docs/snowflake-setup',
               },
             ],
           },
