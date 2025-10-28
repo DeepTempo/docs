@@ -80,7 +80,7 @@ const config = {
       metadata: [
         {name: 'keywords', content: 'deep learning, cybersecurity, threat detection, network security, AI, machine learning, MITRE ATT&CK, anomaly detection'},
         {name: 'author', content: 'DeepTempo'},
-        {name: 'robots', content: 'index,follow'},
+        {name: 'robots', content: 'noindex, nofollow'},
         {property: 'og:type', content: 'website'},
         {property: 'og:site_name', content: 'DeepTempo Documentation'},
         {name: 'twitter:card', content: 'summary_large_image'},
